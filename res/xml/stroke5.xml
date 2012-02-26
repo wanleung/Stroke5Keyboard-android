@@ -37,9 +37,9 @@
     </Row>
        
     <Row android:rowEdgeFlags="bottom">
-        <Key android:codes="-3" android:keyLabel="lang" 
+        <Key android:codes="-3" android:keyLabel="done" 
                 android:keyWidth="15%p" android:keyEdgeFlags="left"/>
-        <Key android:codes="-2" android:keyLabel=".,?" android:keyWidth="15%p"/>
+        <Key android:codes="-2,3,5" android:keyLabel=".,?" android:keyWidth="15%p"/>
         <Key android:codes="-2" android:keyLabel="123" android:keyWidth="15%p"/>
         <Key android:codes="44" android:keyLabel="ABC"
                 android:keyWidth="15%p"/>

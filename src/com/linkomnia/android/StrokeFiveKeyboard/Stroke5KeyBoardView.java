@@ -40,7 +40,7 @@ public class Stroke5KeyBoardView extends KeyboardView {
         super(context, attrs, defStyle);
     }
 
-    @Override
+/*    @Override
     protected boolean onLongPress(Key key) {
     	Log.d("WANLEUNG", "onLongPress");
         if (key.codes[0] == Keyboard.KEYCODE_CANCEL) {
@@ -49,5 +49,5 @@ public class Stroke5KeyBoardView extends KeyboardView {
         } else {
             return super.onLongPress(key);
         }
-    }
+    }*/
 }
