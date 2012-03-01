@@ -41,6 +41,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         KeyboardView.OnKeyboardActionListener {
     /** Called when the activity is first created. */
     private KeyboardView mInputView;
+    private CandidateView mCandidateView;
 
     private Stroke5KeyBoard mStroke5;
     private Stroke5Table mKeyData;
@@ -72,6 +73,12 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         strokemode = true;
         return mInputView;
     }
+    
+    public View onCreateCandidatesView() {
+        mCandidateView = new CandidateView(this);
+        mCandidateView.setDelegate(this);
+        return mCandidateView;
+    }
 
     public void onStartInput(EditorInfo attribute, boolean restarting) {
         super.onStartInput(attribute, restarting);
@@ -82,8 +89,12 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
     
     public void onFinishInput() {
-        super.onFinishInput();
+        if (mInputView != null) {
+            mInputView.closing();
+        }
         Log.d("WANLEUNG", "onFinishInput");
+        super.onFinishInput();
+
     }
     
     public void onStartInputView(EditorInfo attribute, boolean restarting) {
@@ -99,6 +110,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
     
     public void onDisplayCompletions(CompletionInfo[] completions) {
+        super.onDisplayCompletions(completions);
         Log.d("WANLEUNG", "onDisplayCompletions");
     }
     
@@ -116,7 +128,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         Log.d(INPUT_METHOD_SERVICE, "onKeyDown");
-        return true;
+        return super.onKeyDown(keyCode, event);
     }
     public void onPress(int primaryCode) {
         // TODO Auto-generated method stub
@@ -155,7 +167,9 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
 
     public void onDestroy() {
+        this.mInputView.closing();
         this.mKeyData.close();
+        super.onDestroy();
     }
     
     private void stroktreset() {
@@ -218,20 +232,26 @@ public class StrokeFiveKeyboard extends InputMethodService implements
                 c = '*';
             }
         }
-        this.charbuffer[this.strokecount++] = c;
-        Log.d("WANLEUNG", this.mKeyData.searchRecord(new String(this.charbuffer,0,this.strokecount)).get(0));
+        if (this.strokecount < 5) {
+            this.charbuffer[this.strokecount++] = c;
+        }
+        Log.d("WANLEUNG", new String(this.charbuffer,0,this.strokecount));
+        //Log.d("WANLEUNG", this.mKeyData.searchRecord(new String(this.charbuffer,0,this.strokecount)).get(0));
+        //this.mCandidateView.invalidate();
+        updateCandidates();
     }
     
     private void handleBackspace() {
         if (this.strokecount > 1) {
             this.strokecount -= 1;
             //getCurrentInputConnection().setComposingText(mComposing, 1);
-            //updateCandidates();
+            updateCandidates();
         } else if (this.strokecount > 0) {
             this.stroktreset();
             //getCurrentInputConnection().commitText("", 0);
-            //updateCandidates();
+            updateCandidates();
         } else {
+            this.setCandidatesViewShown(false);
             keyDownUp(KeyEvent.KEYCODE_DEL);
         }
     }
@@ -249,6 +269,23 @@ public class StrokeFiveKeyboard extends InputMethodService implements
                 new KeyEvent(KeyEvent.ACTION_DOWN, keyEventCode));
         getCurrentInputConnection().sendKeyEvent(
                 new KeyEvent(KeyEvent.ACTION_UP, keyEventCode));
+    }
+    
+    private void updateCandidates() {
+        ArrayList<String> words = this.mKeyData.searchRecord(new String(this.charbuffer,0,this.strokecount));
+        if (words.isEmpty()) {
+            setCandidatesViewShown(false);
+        } else {
+            this.mCandidateView.setSuggestion(words);
+            setCandidatesViewShown(true);
+        }   
+    }
+    
+    public void onChooseWord(String word) {
+        this.stroktreset();
+        InputConnection ic = getCurrentInputConnection();        
+        ic.commitText(word, 1);
+        setCandidatesViewShown(false);
     }
     
 }
