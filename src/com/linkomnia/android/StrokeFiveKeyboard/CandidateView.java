@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -34,26 +35,31 @@ public class CandidateView extends LinearLayout {
         // TODO Auto-generated constructor stub
         this.ctx = context;
         
+        this.setGravity(Gravity.FILL);
+        
         this.leftButton = new Button(ctx);
         this.leftButton.setText("<");
         this.leftButton.setOnClickListener(new ButtonOnClickListener(this, 0));
+        
 
         this.rightButton = new Button(ctx);
         this.rightButton.setText(">");
         this.rightButton.setOnClickListener(new ButtonOnClickListener(this, 1));
 
-        this.addView(this.leftButton);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1);
+        
+        this.addView(this.leftButton, lp);
 
         
         this.wordbuttonList = new ArrayList<Button>();
         for (int i = 0; i < 5; i++) {
             Button b = new Button(ctx);
             this.wordbuttonList.add(b);
-            this.addView(b);
+            this.addView(b, lp);
             b.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     String str = ((Button)v).getText().toString();
-                    if (!(str.isEmpty() || str.equals(""))) {
+                    if (!(str.isEmpty() || str.equals("\u3000"))) {
                         mDelegate.onChooseWord(((Button)v).getText().toString());
                         wordlevel = 0;
                     }
@@ -62,7 +68,7 @@ public class CandidateView extends LinearLayout {
 
         }
         
-        this.addView(rightButton);
+        this.addView(rightButton, lp);
         this.setBackgroundColor(R.color.candidate_normal);
     }
     
@@ -76,17 +82,20 @@ public class CandidateView extends LinearLayout {
         show_div = (this.wordList.size()-1) / 5;
         show_rem = (this.wordList.size()-1) % 5;
         
-        show_max = show_rem == 0?show_div-1:show_div;
+        show_max = show_div;//show_rem == 0?show_div-1:show_div;
+        Log.d("WANLEUNG", this.wordList.size() + " " + show_div + " " + show_rem + " " + show_max);
         this.showWords();
     }
     
     protected void showWords() {
-        int show = ((this.wordlevel == show_max) && (show_rem !=0))?show_rem:5;
+        int show = (this.wordlevel == show_max)?show_rem:5;
         for (int i = 0; i < 5; i++) {
+            Log.d("WANLEUNG", this.wordList.size() + " wordlevel " + wordlevel + " show " + show + " index " + (this.wordlevel * 5 + i));
             Button b = this.wordbuttonList.get(i);
             if (i > show) {
-                b.setText("");
+                b.setText("\u3000");
             } else {
+                Log.d("WANLEUNG", (this.wordlevel * 5 + i) + "");
                 b.setText(this.wordList.get(this.wordlevel * 5 + i));
             }
         }
