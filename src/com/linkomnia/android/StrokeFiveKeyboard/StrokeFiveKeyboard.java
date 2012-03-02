@@ -248,8 +248,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
             updateCandidates();
         } else if (this.strokecount > 0) {
             this.stroktreset();
-            //getCurrentInputConnection().commitText("", 0);
-            updateCandidates();
+            this.setCandidatesViewShown(false);
         } else {
             this.setCandidatesViewShown(false);
             keyDownUp(KeyEvent.KEYCODE_DEL);
@@ -272,7 +271,12 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
     
     private void updateCandidates() {
-        ArrayList<String> words = this.mKeyData.searchRecord(new String(this.charbuffer,0,this.strokecount));
+        ArrayList<String> words;
+        if (this.charbuffer.length > 0) {
+            words = this.mKeyData.searchRecord(new String(this.charbuffer,0,this.strokecount));
+        } else {
+            words = new ArrayList<String>();
+        }
         if (words.isEmpty()) {
             setCandidatesViewShown(false);
         } else {
