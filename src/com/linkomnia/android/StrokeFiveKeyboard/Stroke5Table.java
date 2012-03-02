@@ -61,10 +61,11 @@ public class Stroke5Table {
 
     public ArrayList<String> searchRecord(String input) {
         ArrayList<String> result = new ArrayList<String>();
-        String[] args =  {input};
-        String order = Stroke5Table.COLUMN_USAGE+" DESC , "+ Stroke5Table.COLUMN_ID +" ASC";
+        String[] args =  {input+"%"};
+        String groupby = " " + Stroke5Table.COLUMN_CODE + " ";
+        String order = Stroke5Table.COLUMN_USAGE+" DESC , "+ Stroke5Table.COLUMN_ID +" ASC ";
         Cursor cursor = database.query(Stroke5Table.TABLE_NAME,
-                searchColumns, Stroke5Table.COLUMN_CODE + " = ? ", args, null, null, order );
+                searchColumns, Stroke5Table.COLUMN_CODE + " like ? ", args, null, null, order );
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
