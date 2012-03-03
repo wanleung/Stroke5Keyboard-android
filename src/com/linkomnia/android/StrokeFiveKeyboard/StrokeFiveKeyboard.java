@@ -235,6 +235,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         if (this.strokecount < 5) {
             this.charbuffer[this.strokecount++] = c;
         }
+        getCurrentInputConnection().setComposingText(new String(this.charbuffer,0,this.strokecount), 1);
         Log.d("WANLEUNG", new String(this.charbuffer,0,this.strokecount));
         //Log.d("WANLEUNG", this.mKeyData.searchRecord(new String(this.charbuffer,0,this.strokecount)).get(0));
         //this.mCandidateView.invalidate();
@@ -244,10 +245,11 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     private void handleBackspace() {
         if (this.strokecount > 1) {
             this.strokecount -= 1;
-            //getCurrentInputConnection().setComposingText(mComposing, 1);
+            getCurrentInputConnection().setComposingText(new String(this.charbuffer,0,this.strokecount), 1);
             updateCandidates();
         } else if (this.strokecount > 0) {
             this.stroktreset();
+            getCurrentInputConnection().setComposingText(new String(this.charbuffer,0,this.strokecount), 1);
             this.setCandidatesViewShown(false);
         } else {
             this.setCandidatesViewShown(false);
