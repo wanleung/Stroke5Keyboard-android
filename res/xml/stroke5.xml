@@ -3,19 +3,19 @@
     android:keyWidth="10%p"
     android:horizontalGap="0px"
     android:verticalGap="0px"
-    android:keyHeight="35dip"
+    android:keyHeight="@dimen/key_height"
     >
 
-    <Row android:keyHeight="70dip">
-        <Key android:codes="1001" android:keyLabel="一" 
+    <Row android:keyHeight="@dimen/strokekey_height">
+        <Key android:codes="1001" android:keyIcon="@drawable/stroke1" 
                 android:keyWidth="20%p" android:keyEdgeFlags="left"/>
-        <Key android:codes="1002" android:keyLabel="丨"
+        <Key android:codes="1002" android:keyIcon="@drawable/stroke2"
                 android:keyWidth="20%p"/>
-        <Key android:codes="1003" android:keyLabel="丿"
+        <Key android:codes="1003" android:keyIcon="@drawable/stroke3"
                 android:keyWidth="20%p"/>
-        <Key android:codes="1004" android:keyLabel="\\"
+        <Key android:codes="1004" android:keyIcon="@drawable/stroke4"
                 android:keyWidth="20%p"/>
-        <Key android:codes="1005" android:keyLabel="Z" 
+        <Key android:codes="1005" android:keyIcon="@drawable/stroke5" 
                 android:keyWidth="20%p" android:keyEdgeFlags="right"/>
     </Row>
     
