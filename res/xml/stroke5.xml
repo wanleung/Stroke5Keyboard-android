@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
     android:keyWidth="10%p"
-    android:horizontalGap="0px"
-    android:verticalGap="0px"
+    android:horizontalGap="0dip"
+    android:verticalGap="5dip"
     android:keyHeight="@dimen/key_height"
     >
 
@@ -20,7 +20,7 @@
     </Row>
     
     <Row>
-        <Key android:codes="3004" android:keyLabel=":o)" 
+        <Key android:codes="3004"  android:keyIcon="@drawable/smiles"
                 android:keyWidth="12.5%p" android:keyEdgeFlags="left"/>
         <Key android:codes="65292" android:keyLabel="\uff0c"
                 android:keyWidth="12.5%p"/>
