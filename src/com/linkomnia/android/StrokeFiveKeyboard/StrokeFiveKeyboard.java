@@ -75,7 +75,9 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
     
     public View onCreateCandidatesView() {
-        mCandidateView = new CandidateView(this);
+        //mCandidateView = new CandidateView(this);
+        mCandidateView = (CandidateView) getLayoutInflater().inflate(
+                R.layout.candidates, null);
         mCandidateView.setDelegate(this);
         return mCandidateView;
     }
@@ -235,7 +237,8 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         if (this.strokecount < 5) {
             this.charbuffer[this.strokecount++] = c;
         }
-        getCurrentInputConnection().setComposingText(new String(this.charbuffer,0,this.strokecount), 1);
+        //getCurrentInputConnection().setComposingText(new String(this.charbuffer,0,this.strokecount), 1);
+        this.mCandidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
         Log.d("WANLEUNG", new String(this.charbuffer,0,this.strokecount));
         //Log.d("WANLEUNG", this.mKeyData.searchRecord(new String(this.charbuffer,0,this.strokecount)).get(0));
         //this.mCandidateView.invalidate();
@@ -245,11 +248,13 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     private void handleBackspace() {
         if (this.strokecount > 1) {
             this.strokecount -= 1;
-            getCurrentInputConnection().setComposingText(new String(this.charbuffer,0,this.strokecount), 1);
+            //getCurrentInputConnection().setComposingText(new String(this.charbuffer,0,this.strokecount), 1);
+            this.mCandidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
             updateCandidates();
         } else if (this.strokecount > 0) {
             this.stroktreset();
-            getCurrentInputConnection().setComposingText(new String(this.charbuffer,0,this.strokecount), 1);
+            //getCurrentInputConnection().setComposingText(new String(this.charbuffer,0,this.strokecount), 1);
+            this.mCandidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
             this.setCandidatesViewShown(false);
         } else {
             this.setCandidatesViewShown(false);
@@ -279,7 +284,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         } else {
             words = new ArrayList<String>();
         }
-        if (words.isEmpty()) {
+        if (words.isEmpty() && this.charbuffer.length == 0) {
             setCandidatesViewShown(false);
         } else {
             this.mCandidateView.setSuggestion(words);
