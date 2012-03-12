@@ -70,6 +70,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
                 null);
         mInputView.setOnKeyboardActionListener(this);
         mInputView.setKeyboard(mStroke5);
+        mInputView.setPreviewEnabled(false);
         strokemode = true;
         return mInputView;
     }
