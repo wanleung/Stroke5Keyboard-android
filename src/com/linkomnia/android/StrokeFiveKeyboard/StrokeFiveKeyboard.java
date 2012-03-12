@@ -43,7 +43,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     private KeyboardView mInputView;
     private CandidateView mCandidateView;
 
-    private Keyboard mCurrentKeyboard;
+    //private Keyboard mCurrentKeyboard;
     private Keyboard mLastKeyboard;
     
     private Stroke5KeyBoard mStroke5;
@@ -78,7 +78,6 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         mInputView.setKeyboard(mStroke5);
         mInputView.setPreviewEnabled(false);
         strokemode = true;
-        mCurrentKeyboard = mStroke5;
         return mInputView;
     }
     
@@ -110,7 +109,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     public void onStartInputView(EditorInfo attribute, boolean restarting) {
         super.onStartInputView(attribute, restarting);
         Log.d("WANLEUNG", "onStartInputView");
-        if (this.mCurrentKeyboard == this.mStroke5) {
+        if (this.mStroke5 == this.mInputView.getKeyboard()) {
             this.strokemode = true;
         } else {
             this.strokemode = false;
@@ -244,7 +243,6 @@ public class StrokeFiveKeyboard extends InputMethodService implements
                 this.handleLatinCharacter(keycode, keyCodes);
                 break;
             }
-            
         }
     }
     
@@ -355,18 +353,20 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     
     public void switchKeyboard(int keyCode) {
         if (keyCode == 3002) {
-            if (this.mCurrentKeyboard == this.mStroke5) {
+            if (this.mStroke5 == this.mInputView.getKeyboard()) {
                 this.strokemode = false;
                 this.stroktreset();
-                this.mCurrentKeyboard = this.mQwertKeyboard;
+                mInputView.setKeyboard(this.mQwertKeyboard);
+                this.mInputView.getKeyboard().setShifted(false);
             } else {
                 this.strokemode = true;
                 this.stroktreset();
-                this.mCurrentKeyboard = this.mStroke5;
+                mInputView.setKeyboard(this.mStroke5);
+                this.mInputView.getKeyboard().setShifted(false);
             }
         }
-        this.mCurrentKeyboard.setShifted(false);
-        mInputView.setKeyboard(this.mCurrentKeyboard);                
+        
+                        
     }
     
 }
