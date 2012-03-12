@@ -23,7 +23,7 @@
         	android:layout_height="fill_parent"
         	android:clickable="true"
         	android:textSize="@dimen/candidate_font_height"
-        
+        	android:textColor="@color/candidate_normal"
         	/>
 
             <LinearLayout
@@ -43,6 +43,7 @@
         	android:layout_height="fill_parent"
         	android:clickable="true"
         	android:textSize="@dimen/candidate_font_height"
+        	android:textColor="@color/candidate_normal"
         	/>
         
     </LinearLayout>
