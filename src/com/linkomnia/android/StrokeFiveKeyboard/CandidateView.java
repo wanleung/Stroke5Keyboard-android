@@ -9,6 +9,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
@@ -26,7 +27,7 @@ public class CandidateView extends LinearLayout {
     
     private int result_max;
     
-    private ArrayList<Button> inputBox;
+    private ArrayList<ImageButton> inputBox;
     private ArrayList<Button> wordbuttonList;
     private int wordlevel;
 
@@ -51,14 +52,10 @@ public class CandidateView extends LinearLayout {
         this.leftButton = (Button) findViewById(R.id.arrow_left);
         this.leftButton.setText("<");
         this.leftButton.setOnClickListener(new ButtonOnClickListener(this, 0));
-        //this.leftButton.setBackgroundColor(R.color.candidate_background);
-        //this.leftButton.setTextColor(R.color.candidate_normal);
 
         this.rightButton = (Button) findViewById(R.id.arrow_right);
         this.rightButton.setText(">");
         this.rightButton.setOnClickListener(new ButtonOnClickListener(this, 1));
-        //this.rightButton.setTextColor(R.color.candidate_normal);
-        //this.rightButton.setBackgroundColor(R.color.candidate_background);
 
         this.wordbuttonList = new ArrayList<Button>();
         this.wordbar = (LinearLayout)this.findViewById(R.id.wordbar);
@@ -67,8 +64,7 @@ public class CandidateView extends LinearLayout {
 
         for (int i = 0; i < result_max; i++) {
             Button b = new Button(ctx);
-            //b.setTextColor(R.color.candidate_normal);
-            //b.setBackgroundColor(getResources().getColor(R.color.candidate_background));
+            b.setTextColor(this.getResources().getColor(R.color.candidate_normal));
             b.setTextSize(this.getResources().getDimension(R.dimen.keychar_size));
             this.wordbuttonList.add(b);
             this.wordbar.addView(b, lp);
@@ -85,13 +81,11 @@ public class CandidateView extends LinearLayout {
         }
         
         this.bottombar = (LinearLayout)this.findViewById(R.id.bottombar);
-        this.inputBox = new ArrayList<Button>();
+        this.inputBox = new ArrayList<ImageButton>();
         for (int i = 0; i < 5; i++) {
-            Button b = new Button(ctx);
-            //b.setTextColor(R.color.candidate_normal);
-            b.setText("\u3000");
+            ImageButton b = new ImageButton(ctx);
+            b.setImageResource(R.drawable.stroke0_show);
             b.setBackgroundColor(getResources().getColor(R.color.candidate_background));
-            b.setTextSize(this.getResources().getDimension(R.dimen.keychar_size));
             this.inputBox.add(b);
             this.bottombar.addView(b, lp);
         }
@@ -116,9 +110,34 @@ public class CandidateView extends LinearLayout {
     public void updateInputBox(String input) {
         for (int i = 0; i < 5; i++) {
             if (i<input.length()) {
-                this.inputBox.get(i).setText(String.format("%c", input.charAt(i)));
+                switch (input.charAt(i)) {
+                    case 'm': {
+                        this.inputBox.get(i).setImageResource(R.drawable.stroke1_show);
+                        break;
+                    }
+                    case '/': {
+                        this.inputBox.get(i).setImageResource(R.drawable.stroke2_show);
+                        break;
+                    }
+                    case ',': {
+                        this.inputBox.get(i).setImageResource(R.drawable.stroke3_show);
+                        break;
+                    }
+                    case '.': {
+                        this.inputBox.get(i).setImageResource(R.drawable.stroke4_show);
+                        break;
+                    }
+                    case 'n': {
+                        this.inputBox.get(i).setImageResource(R.drawable.stroke5_show);
+                        break;
+                    }
+                    default: {
+                        this.inputBox.get(i).setImageResource(R.drawable.stroke0_show);
+                        break;
+                    }
+                }
             } else {
-                this.inputBox.get(i).setText("\u3000");
+                this.inputBox.get(i).setImageResource(R.drawable.stroke0_show);
             }
         }
     }
