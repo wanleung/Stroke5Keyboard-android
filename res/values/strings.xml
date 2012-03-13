@@ -22,7 +22,7 @@
 */
 -->
 <resources>
-    <string name="ime_name">Stroke5Keyboard</string>
+    <string name="ime_name">Stroke5 Keyboard</string>
     <string name="database_version">1</string>
     <string name="result_max">5</string>
 </resources>

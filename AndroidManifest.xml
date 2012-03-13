@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" 
         package="com.linkomnia.android.StrokeFiveKeyboard">
     <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="13" />
-    <application android:label="@string/ime_name">
+    <application android:label="@string/ime_name"
+        	android:icon="@drawable/ic_launcher">
         <service android:name="StrokeFiveKeyboard"
                 android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
