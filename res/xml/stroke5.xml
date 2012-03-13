@@ -75,10 +75,10 @@
     <Row android:rowEdgeFlags="bottom">
         <Key android:codes="-3" android:keyLabel="done" 
                 android:keyWidth="10%p" android:keyEdgeFlags="left"/>
-        <Key android:codes="3002" android:keyLabel="ab12" android:keyWidth="15%p"/>
+        <Key android:codes="-300" android:keyLabel="ab12" android:keyWidth="15%p"/>
         <Key android:codes="12288" android:keyLabel="space" 
                 android:keyWidth="40%p" android:isRepeatable="true"/>
-        <Key android:codes="3001" android:keyLabel="$%*" android:keyWidth="15%p"/>
+        <Key android:codes="-2" android:keyLabel="$%*" android:keyWidth="15%p"/>
         <Key android:codes="10" android:keyLabel="return" 
                 android:keyWidth="20%p" android:keyEdgeFlags="right"/>
     </Row>

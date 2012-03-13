@@ -19,7 +19,7 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-package com.linkomnia.android.StrokeFiveKeyboard;
+package com.linkomnia.android.Stroke5;
 
 import java.util.ArrayList;
 
@@ -35,6 +35,8 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 import java.math.*;
+
+import com.linkomnia.android.StrokeFiveKeyboard.R;
 
 public class CandidateView extends LinearLayout {
     

@@ -19,10 +19,12 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-package com.linkomnia.android.StrokeFiveKeyboard;
+package com.linkomnia.android.Stroke5;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.linkomnia.android.StrokeFiveKeyboard.R;
 
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
@@ -41,70 +43,55 @@ import android.view.inputmethod.InputMethodManager;
 public class StrokeFiveKeyboard extends InputMethodService implements
         KeyboardView.OnKeyboardActionListener {
     /** Called when the activity is first created. */
-    private KeyboardView mInputView;
-    private CandidateView mCandidateView;
-
-    //private Keyboard mCurrentKeyboard;
-    private Keyboard mLastKeyboard;
+    private IMEKeyboardView inputView;
+    private CandidateView candidateView;
     
-    private Stroke5Table mKeyData;
+    private Stroke5Table stroke5WordDictionary;
 
     private Stroke5KeyBoard mStroke5Keyboard;
     private Stroke5KeyBoard mChineseSymbolKeyboard;
     private LatinKeyboard mQwertKeyboard;
     private LatinKeyboard mEnglishSymbolKeyboard;
     
-    private boolean strokemode;
+    private IMESwitch imeSwitch;
+    
     private char [] charbuffer = new char[5];
     private int strokecount = 0;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mKeyData = new Stroke5Table(this, false);
-        mKeyData.open();
+        stroke5WordDictionary = new Stroke5Table(this, false);
+        stroke5WordDictionary.open();
     }
 
     public void onInitializeInterface() {
-        // ArrayList<String> aaa = mKeyData.searchRecord(",");
-        mStroke5Keyboard = new Stroke5KeyBoard(this, R.xml.stroke5);
-        mChineseSymbolKeyboard = new Stroke5KeyBoard(this, R.xml.symbols_ch);
-        mQwertKeyboard = new LatinKeyboard(this, R.xml.qwert);
-        mEnglishSymbolKeyboard = new LatinKeyboard(this, R.xml.symbols_en);
-        // Log.d("WANLEUNG", getFilesDir());
-        // Log.d("WANLEUNG", aaa.size()+"");
-
+        imeSwitch = new IMESwitch(this);
     }
 
     public View onCreateInputView() {
-        mInputView = (KeyboardView) getLayoutInflater().inflate(R.layout.main,
-                null);
-        mInputView.setOnKeyboardActionListener(this);
-        mInputView.setKeyboard(mStroke5Keyboard);
-        mInputView.setPreviewEnabled(false);
-        strokemode = true;
-        return mInputView;
+        inputView = (IMEKeyboardView) getLayoutInflater().inflate(R.layout.main, null);
+        inputView.setPreviewEnabled(false);
+        inputView.setOnKeyboardActionListener(this);
+        return inputView;
     }
     
     public View onCreateCandidatesView() {
-        //mCandidateView = new CandidateView(this);
-        mCandidateView = (CandidateView) getLayoutInflater().inflate(
-                R.layout.candidates, null);
-        mCandidateView.setDelegate(this);
-        return mCandidateView;
+        candidateView = (CandidateView) getLayoutInflater().inflate(R.layout.candidates, null);
+        candidateView.setDelegate(this);
+        return candidateView;
     }
 
     public void onStartInput(EditorInfo attribute, boolean restarting) {
         super.onStartInput(attribute, restarting);
         Log.d("WANLEUNG", "onStartInput");
-        strokemode = true;
         this.stroktreset();
         //this.mInputView.closing();
     }
     
     public void onFinishInput() {
-        if (mInputView != null) {
-            mInputView.closing();
+        if (inputView != null) {
+            inputView.closing();
         }
         Log.d("WANLEUNG", "onFinishInput");
         super.onFinishInput();
@@ -113,12 +100,8 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     
     public void onStartInputView(EditorInfo attribute, boolean restarting) {
         super.onStartInputView(attribute, restarting);
-        Log.d("WANLEUNG", "onStartInputView");
-        if (this.mStroke5Keyboard == this.mInputView.getKeyboard()) {
-            this.strokemode = true;
-        } else {
-            this.strokemode = false;
-        }
+        this.imeSwitch.init();
+        this.inputView.setKeyboard(this.imeSwitch.getCurrentKeyboard());
     }
     
     public void onUpdateSelection(int oldSelStart, int oldSelEnd,
@@ -135,19 +118,16 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     
     public void onKey(int primaryCode, int[] keyCodes) {
         // TODO Auto-generated method stub
-        Log.d("WANLEUNG", "onkey " + primaryCode + " " + keyCodes.toString());
-        for (int i = 0; i<keyCodes.length; i++) {
-            Log.d("WANLEUNG", "onkey " + primaryCode + " " + keyCodes[i]);
+        if (imeSwitch.handleKey(primaryCode)) {
+            this.stroktreset();
+            this.inputView.setKeyboard(imeSwitch.getCurrentKeyboard());
+            return;
         }
-        //ArrayList<String> list = mKeyData.searchRecord(".n.");
-        //Log.d("WANLEUNG", list.get(0) + "");
-        //InputConnection ic = getCurrentInputConnection();
-        //ic.commitText(list.get(0), 1);
         if (primaryCode == Keyboard.KEYCODE_CANCEL) {
             this.handleClose();
             return;
         }
-        if (this.strokemode) {
+        if (this.imeSwitch.isChinese()) {
             this.handleStrokeMode(primaryCode);
         } else {
             this.handleLatinMode(primaryCode, keyCodes);
@@ -195,15 +175,15 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
 
     public void onDestroy() {
-        this.mInputView.closing();
-        this.mKeyData.close();
+        this.inputView.closing();
+        this.stroke5WordDictionary.close();
         super.onDestroy();
     }
     
     private void stroktreset() {
         this.charbuffer = new char[5];
         this.strokecount = 0;
-        if (this.mCandidateView != null) {
+        if (this.candidateView != null) {
             this.updateCandidates();
         }
     }
@@ -214,22 +194,13 @@ public class StrokeFiveKeyboard extends InputMethodService implements
                 this.handleBackspace();
                 break;
             }
+
             case 1001:
             case 1002:
             case 1003:
             case 1004:
             case 1005: {
                 this.typingStroke(keyCode);
-                break;
-            }
-            case 3001:
-            case 3002: {
-                this.switchKeyboard(keyCode);
-                break;
-            }
-            case 3000:
-            case 3003:
-            case 3004: {
                 break;
             }
             default: {
@@ -248,11 +219,6 @@ public class StrokeFiveKeyboard extends InputMethodService implements
             }
             case Keyboard.KEYCODE_DELETE: {
                 this.handleBackspace();
-                break;
-            }
-            case 3001:
-            case 3002: {
-                this.switchKeyboard(keycode);
                 break;
             }
             default: {
@@ -293,7 +259,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
             this.charbuffer[this.strokecount++] = c;
         }
         //getCurrentInputConnection().setComposingText(new String(this.charbuffer,0,this.strokecount), 1);
-        this.mCandidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
+        this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
         Log.d("WANLEUNG", new String(this.charbuffer,0,this.strokecount));
         //Log.d("WANLEUNG", this.mKeyData.searchRecord(new String(this.charbuffer,0,this.strokecount)).get(0));
         //this.mCandidateView.invalidate();
@@ -301,16 +267,14 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
     
     private void handleBackspace() {
-        if (this.strokemode) {
+        if (imeSwitch.isChinese()) {
             if (this.strokecount > 1) {
                 this.strokecount -= 1;
-                //getCurrentInputConnection().setComposingText(new String(this.charbuffer,0,this.strokecount), 1);
-                this.mCandidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
+                this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
                 updateCandidates();
             } else if (this.strokecount > 0) {
                 this.stroktreset();
-                //getCurrentInputConnection().setComposingText(new String(this.charbuffer,0,this.strokecount), 1);
-                this.mCandidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
+                this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
                 this.setCandidatesViewShown(false);
             } else {
                 this.setCandidatesViewShown(false);
@@ -331,7 +295,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     
     private void handleLatinCharacter(int primaryCode, int[] keyCodes) {
         if (isInputViewShown()) {
-            if (mInputView.isShifted()) {
+            if (inputView.isShifted()) {
                 primaryCode = Character.toUpperCase(primaryCode);
                 //mInputView.setShifted(false);
             }
@@ -340,12 +304,12 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
     
     private void handleShiftKey() {
-        if (this.mInputView == null) {
+        if (this.inputView == null) {
             return;
         }
-        if (this.mQwertKeyboard == this.mInputView.getKeyboard()) {
+        if (this.mQwertKeyboard == this.inputView.getKeyboard()) {
             // Alphabet keyboard
-            mInputView.setShifted(!mInputView.isShifted());
+            inputView.setShifted(!inputView.isShifted());
         } 
     }
 
@@ -360,14 +324,14 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     private void updateCandidates() {
         ArrayList<String> words;
         if (strokecount > 0) {
-            words = this.mKeyData.searchRecord(new String(this.charbuffer,0,this.strokecount));
+            words = this.stroke5WordDictionary.searchRecord(new String(this.charbuffer,0,this.strokecount));
         } else {
             words = new ArrayList<String>();
         }
         if (words.isEmpty()) {
             setCandidatesViewShown(false);
         } else {
-            this.mCandidateView.setSuggestion(words);
+            this.candidateView.setSuggestion(words);
             setCandidatesViewShown(true);
         }   
     }
@@ -379,54 +343,9 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         setCandidatesViewShown(false);
     }
     
-    public void switchKeyboard(int keyCode) {
-        Keyboard currentKeyboard = this.mInputView.getKeyboard();
-        if (keyCode == 3002) {
-            if (this.mStroke5Keyboard == currentKeyboard) {
-                this.strokemode = false;
-                this.stroktreset();
-                mInputView.setKeyboard(this.mQwertKeyboard);
-                this.mInputView.getKeyboard().setShifted(false);
-            } else if (this.mEnglishSymbolKeyboard == currentKeyboard) {
-                this.strokemode = false;
-                this.stroktreset();
-                mInputView.setKeyboard(this.mQwertKeyboard);
-                this.mInputView.getKeyboard().setShifted(false);
-            } else {
-                this.strokemode = true;
-                this.stroktreset();
-                mInputView.setKeyboard(this.mStroke5Keyboard);
-                this.mInputView.getKeyboard().setShifted(false);
-            }
-        } else if (keyCode == 3001) {
-            if (this.mStroke5Keyboard == currentKeyboard) {
-                this.strokemode = true;
-                this.stroktreset();
-                mInputView.setKeyboard(this.mChineseSymbolKeyboard);
-                this.mInputView.getKeyboard().setShifted(false);
-            } else if (this.mChineseSymbolKeyboard == currentKeyboard) {
-                this.strokemode = true;
-                this.stroktreset();
-                mInputView.setKeyboard(this.mStroke5Keyboard);
-                this.mInputView.getKeyboard().setShifted(false);
-            } else if (this.mQwertKeyboard == currentKeyboard) {
-                this.strokemode = false;
-                this.stroktreset();
-                mInputView.setKeyboard(this.mEnglishSymbolKeyboard);
-                this.mInputView.getKeyboard().setShifted(false);
-            } else if (this.mEnglishSymbolKeyboard == currentKeyboard) {
-                this.strokemode = false;
-                this.stroktreset();
-                mInputView.setKeyboard(this.mQwertKeyboard);
-                this.mInputView.getKeyboard().setShifted(false);
-            }
-        }
-                        
-    }
-    
     private void handleClose() {
         this.stroktreset();
         requestHideSelf(0);
-        mInputView.closing();
+        inputView.closing();
     }
 }

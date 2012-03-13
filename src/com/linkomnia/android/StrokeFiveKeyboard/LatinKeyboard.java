@@ -23,7 +23,7 @@
  * This Class is to handle non Stroke5 Keyboard
  */
 
-package com.linkomnia.android.StrokeFiveKeyboard;
+package com.linkomnia.android.Stroke5;
 
 import android.content.Context;
 import android.inputmethodservice.Keyboard;

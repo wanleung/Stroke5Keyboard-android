@@ -19,7 +19,7 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-package com.linkomnia.android.StrokeFiveKeyboard;
+package com.linkomnia.android.Stroke5;
 
 import android.content.Context;
 import android.inputmethodservice.Keyboard;
@@ -28,26 +28,24 @@ import android.inputmethodservice.Keyboard.Key;
 import android.util.AttributeSet;
 import android.util.Log;
 
-public class Stroke5KeyBoardView extends KeyboardView {
+public class IMEKeyboardView extends KeyboardView {
 
-    static final int KEYCODE_OPTIONS = -100;
-
-    public Stroke5KeyBoardView(Context context, AttributeSet attrs) {
+    public IMEKeyboardView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public Stroke5KeyBoardView(Context context, AttributeSet attrs, int defStyle) {
+    public IMEKeyboardView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
-/*    @Override
+    @Override
     protected boolean onLongPress(Key key) {
-    	Log.d("WANLEUNG", "onLongPress");
-        if (key.codes[0] == Keyboard.KEYCODE_CANCEL) {
-            getOnKeyboardActionListener().onKey(KEYCODE_OPTIONS, null);
+        if (key.codes[0] == IMEKeyboard.KEYCODE_SHIFT) {
+            getOnKeyboardActionListener().onKey(IMEKeyboard.KEYCODE_CAPLOCK, null);
             return true;
         } else {
             return super.onLongPress(key);
         }
-    }*/
+    }
+    
 }

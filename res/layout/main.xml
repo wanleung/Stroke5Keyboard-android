@@ -21,7 +21,7 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 -->
-<com.linkomnia.android.StrokeFiveKeyboard.Stroke5KeyBoardView
+<com.linkomnia.android.Stroke5.IMEKeyboardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/keyboard"
         android:layout_alignParentBottom="true"
