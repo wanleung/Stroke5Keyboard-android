@@ -42,17 +42,30 @@
     </Row>
     
     <Row>
+        <Key android:codes="49" android:keyLabel="1" android:keyEdgeFlags="left"/>
+        <Key android:codes="50" android:keyLabel="2"/>
+        <Key android:codes="51" android:keyLabel="3"/>
+        <Key android:codes="52" android:keyLabel="4"/>
+        <Key android:codes="53" android:keyLabel="5"/>
+        <Key android:codes="54" android:keyLabel="6"/>
+        <Key android:codes="55" android:keyLabel="7"/>
+        <Key android:codes="56" android:keyLabel="8"/>
+        <Key android:codes="57" android:keyLabel="9"/>
+        <Key android:codes="48" android:keyLabel="0" android:keyEdgeFlags="right"/>
+    </Row>   
+    
+    <Row>
         <Key android:codes="3004"  android:keyIcon="@drawable/smiles"
                 android:keyWidth="12.5%p" android:keyEdgeFlags="left"/>
-        <Key android:codes="65292" android:keyLabel="\uff0c"
+        <Key android:keyLabel="\uff0c"
                 android:keyWidth="12.5%p"/>
-        <Key android:codes="12290" android:keyLabel="\u3002"
+        <Key android:keyLabel="\u3002"
                 android:keyWidth="12.5%p"/>
-        <Key android:codes="12289" android:keyLabel="\u3001"
+        <Key android:keyLabel="\u3001"
                 android:keyWidth="12.5%p"/>
-        <Key android:codes="65281" android:keyLabel="\uff01"
+        <Key android:keyLabel="\uff01"
                 android:keyWidth="12.5%p"/>
-        <Key android:codes="65311" android:keyLabel="\uff1f"
+        <Key android:keyLabel="\uff1f"
                 android:keyWidth="12.5%p"/>
         <Key android:codes="-5" android:keyLabel="delete"
                 android:isRepeatable="true"

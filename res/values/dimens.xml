@@ -25,7 +25,7 @@
     <dimen name="keychar_size">42sp</dimen>
     <dimen name="key_height">70dip</dimen>
     <dimen name="key_height_bottom_row">70dip</dimen>
-    <dimen name="strokekey_height">140dip</dimen>
+    <dimen name="strokekey_height">145dip</dimen>
     <dimen name="candidate_font_height">50sp</dimen>
     <dimen name="candidates_view_height">200dip</dimen>
 </resources>
