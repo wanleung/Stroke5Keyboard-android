@@ -25,6 +25,7 @@ import com.linkomnia.android.StrokeFiveKeyboard.R;
 
 import android.content.Context;
 import android.inputmethodservice.Keyboard;
+import android.util.Log;
 
 public class IMESwitch {
     
@@ -54,7 +55,7 @@ public class IMESwitch {
         }
     }
     
-    public Keyboard getCurrentKeyboard() {
+    public IMEKeyboard getCurrentKeyboard() {
         return this.currentKeyboard;
     }
     
@@ -83,14 +84,19 @@ public class IMESwitch {
         switch (keyCode) {
             case IMEKeyboard.KEYCODE_CAPLOCK: {
                 this.currentKeyboard.setCapLock(! this.currentKeyboard.isCapLock());
+                result = true;
                 break;
             }
             case IMEKeyboard.KEYCODE_SHIFT: {
-                this.currentKeyboard.setShifted(!(this.currentKeyboard.isCapLock() || this.currentKeyboard.isShifted()));
+                if (this.currentKeyboard.isCapLock()) {
+                    this.currentKeyboard.setCapLock(false);
+                } else {
+                    this.currentKeyboard.setShifted(! this.currentKeyboard.isShifted());
+                }
                 if (this.isNotCharKeyboard()) {
                     this.switchBetweenSymbolShift();
                 }
-                result = true;
+                result = true; 
                 break;
             }
             case IMEKeyboard.KEYCODE_MODE_CHANGE_CHAR: {
@@ -124,11 +130,13 @@ public class IMESwitch {
                 this.currentKeyboard = this.chineseKeyboard;
             }
         }
+        this.currentKeyboard.setCapLock(false);
     }
     
     public void switchToSymbol() {
         this.isFromChinese = this.isChinese();
-        this.currentKeyboard = this.enSymbolNumberKeyboard;            
+        this.currentKeyboard = this.enSymbolNumberKeyboard; 
+        this.currentKeyboard.setCapLock(false);
     }
     
     public void switchBetweenSymbolShift() {
@@ -140,4 +148,5 @@ public class IMESwitch {
             this.currentKeyboard.setCapLock(false);
         }
     }
+    
 }
