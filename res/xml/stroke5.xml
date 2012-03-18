@@ -39,46 +39,35 @@
                 android:keyWidth="20%p"/>
         <Key android:codes="1005" android:keyIcon="@drawable/stroke5" 
                 android:keyWidth="20%p" android:keyEdgeFlags="right"/>
-    </Row>
+    </Row> 
     
     <Row>
-        <Key android:codes="49" android:keyLabel="1" android:keyEdgeFlags="left"/>
-        <Key android:codes="50" android:keyLabel="2"/>
-        <Key android:codes="51" android:keyLabel="3"/>
-        <Key android:codes="52" android:keyLabel="4"/>
-        <Key android:codes="53" android:keyLabel="5"/>
-        <Key android:codes="54" android:keyLabel="6"/>
-        <Key android:codes="55" android:keyLabel="7"/>
-        <Key android:codes="56" android:keyLabel="8"/>
-        <Key android:codes="57" android:keyLabel="9"/>
-        <Key android:codes="48" android:keyLabel="0" android:keyEdgeFlags="right"/>
-    </Row>   
-    
-    <Row>
-        <Key android:codes="3004"  android:keyIcon="@drawable/smiles"
-                android:keyWidth="12.5%p" android:keyEdgeFlags="left"/>
+        <Key android:codes="-500" android:keyLabel="[]" android:keyEdgeFlags="left"
+                android:keyWidth="20%p"/>
+        <Key android:codes="-400"  android:keyIcon="@drawable/smiles"
+                android:keyWidth="10%p"/>
         <Key android:keyLabel="\uff0c"
-                android:keyWidth="12.5%p"/>
+                android:keyWidth="10%p"/>
         <Key android:keyLabel="\u3002"
-                android:keyWidth="12.5%p"/>
+                android:keyWidth="10%p"/>
         <Key android:keyLabel="\u3001"
-                android:keyWidth="12.5%p"/>
+                android:keyWidth="10%p"/>
         <Key android:keyLabel="\uff01"
-                android:keyWidth="12.5%p"/>
+                android:keyWidth="10%p"/>
         <Key android:keyLabel="\uff1f"
-                android:keyWidth="12.5%p"/>
+                android:keyWidth="10%p"/>
         <Key android:codes="-5" android:keyLabel="delete"
                 android:isRepeatable="true"
-                android:keyWidth="25%p" android:keyEdgeFlags="right"/>
+                android:keyWidth="20%p" android:keyEdgeFlags="right"/>
     </Row>
        
     <Row android:rowEdgeFlags="bottom">
         <Key android:codes="-3" android:keyLabel="done" 
                 android:keyWidth="10%p" android:keyEdgeFlags="left"/>
-        <Key android:codes="-300" android:keyLabel="ab12" android:keyWidth="15%p"/>
+        <Key android:codes="-2" android:keyLabel="123" android:keyWidth="15%p"/>
         <Key android:codes="12288" android:keyLabel="space" 
                 android:keyWidth="40%p" android:isRepeatable="true"/>
-        <Key android:codes="-2" android:keyLabel="$%*" android:keyWidth="15%p"/>
+        <Key android:codes="-300" android:keyLabel="ABC" android:keyWidth="15%p"/>
         <Key android:codes="10" android:keyLabel="return" 
                 android:keyWidth="20%p" android:keyEdgeFlags="right"/>
     </Row>

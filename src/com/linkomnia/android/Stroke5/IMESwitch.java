@@ -33,8 +33,9 @@ public class IMESwitch {
     
     private IMEKeyboard currentKeyboard;
     private IMEKeyboard englishKeyboard;
-    private IMEKeyboard enSymbolNumberKeyboard;
+    private IMEKeyboard enNumberSymbolKeyboard;
     private IMEKeyboard enSymoblShiftKeyboard;
+    private IMEKeyboard chSymoblKeyboard;
     private IMEKeyboard chineseKeyboard;
     
     private boolean isFromChinese;
@@ -42,8 +43,9 @@ public class IMESwitch {
     public IMESwitch(Context ctx) {
         this.ctx = ctx;
         this.englishKeyboard = new IMEKeyboard(this.ctx, R.xml.qwert);
-        this.enSymbolNumberKeyboard = new IMEKeyboard(this.ctx, R.xml.symbols_en);
-        this.enSymoblShiftKeyboard = new IMEKeyboard(this.ctx, R.xml.symbols_ch);
+        this.enNumberSymbolKeyboard = new IMEKeyboard(this.ctx, R.xml.symbols_en);
+        this.enSymoblShiftKeyboard = new IMEKeyboard(this.ctx, R.xml.symbols_en_shift);
+        this.chSymoblKeyboard = new IMEKeyboard(this.ctx, R.xml.symbols_ch);
         this.chineseKeyboard = new IMEKeyboard(this.ctx, R.xml.stroke5);
     }
     
@@ -67,16 +69,20 @@ public class IMESwitch {
         return this.englishKeyboard == this.currentKeyboard;
     }
 
-    public boolean isSymbol() {
-        return this.enSymbolNumberKeyboard == this.currentKeyboard;
+    public boolean isNumberSymbol() {
+        return this.enNumberSymbolKeyboard == this.currentKeyboard;
     }
 
-    public boolean isPunctuation() {
+    public boolean isSymbol() {
         return this.enSymoblShiftKeyboard == this.currentKeyboard;
     }
     
+    public boolean isChineseSymbol() {
+        return this.chSymoblKeyboard == this.currentKeyboard; 
+    }
+    
     public boolean isNotCharKeyboard() {
-        return (this.isSymbol() || this.isPunctuation());
+        return (this.isNumberSymbol() || this.isSymbol() || this.isChineseSymbol());
     }
        
     public boolean handleKey(int keyCode) {
@@ -105,7 +111,17 @@ public class IMESwitch {
                 break;
             }
             case IMEKeyboard.KEYCODE_MODE_CHANGE: {
-                this.switchToSymbol();
+                this.switchToNumberSymbol();
+                result = true;
+                break;
+            }
+            case IMEKeyboard.KEYCODE_MODE_CHANGE_CHSYMBOL: {
+                this.switchToChineseSymbol();
+                result = true;
+                break;
+            }
+            case IMEKeyboard.KEYCODE_MODE_CHANGE_SIMLY: {
+                
                 result = true;
                 break;
             }
@@ -133,9 +149,17 @@ public class IMESwitch {
         this.currentKeyboard.setCapLock(false);
     }
     
-    public void switchToSymbol() {
-        this.isFromChinese = this.isChinese();
-        this.currentKeyboard = this.enSymbolNumberKeyboard; 
+    public void switchToNumberSymbol() {
+        if (this.isNotCharKeyboard()) {
+            if (this.isNumberSymbol()) {
+                this.currentKeyboard = this.enSymoblShiftKeyboard;
+            } else {
+                this.currentKeyboard = this.enNumberSymbolKeyboard;
+            }
+        } else {
+            this.isFromChinese = this.isChinese();
+            this.currentKeyboard = this.enNumberSymbolKeyboard;             
+        }
         this.currentKeyboard.setCapLock(false);
     }
     
@@ -144,9 +168,14 @@ public class IMESwitch {
             this.currentKeyboard = this.enSymoblShiftKeyboard;
             this.currentKeyboard.setCapLock(true);
         } else {
-            this.currentKeyboard = this.enSymbolNumberKeyboard;
+            this.currentKeyboard = this.enNumberSymbolKeyboard;
             this.currentKeyboard.setCapLock(false);
         }
     }
     
+    public void switchToChineseSymbol() {
+        this.isFromChinese = this.isChinese();
+        this.currentKeyboard = this.chSymoblKeyboard;
+        this.currentKeyboard.setCapLock(false);
+    }
 }
