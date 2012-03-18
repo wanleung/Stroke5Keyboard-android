@@ -74,12 +74,14 @@
     <Row android:rowEdgeFlags="bottom">
         <Key android:codes="-3" android:keyLabel="done" 
                 android:keyWidth="10%p" android:keyEdgeFlags="left"/>
-        <Key android:codes="-300" android:keyLabel="ab12" 
+        <Key android:codes="-300" android:keyIcon="@drawable/key_char" 
                 android:keyWidth="15%p"/>
         <Key android:codes="32" android:keyLabel="space" 
                 android:keyWidth="40%p" android:isRepeatable="true"/>
+        <Key android:codes="-600" android:keyIcon="@drawable/key_lang"
+        		android:keyWidth="15%p"/>
         <Key android:codes="10" android:keyLabel="return" 
-                android:horizontalGap="15%p" android:keyWidth="20%p" android:keyEdgeFlags="right"/>
+                android:keyWidth="20%p" android:keyEdgeFlags="right"/>
     </Row>
     
 </Keyboard>

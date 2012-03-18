@@ -125,6 +125,11 @@ public class IMESwitch {
                 result = true;
                 break;
             }
+            case IMEKeyboard.KEYCODE_MODE_CHANGE_LANG: {
+                this.switchLanguage();
+                result = true;
+                break;
+            }
             default: {
                 result = false;
             }
@@ -158,7 +163,7 @@ public class IMESwitch {
             }
         } else {
             this.isFromChinese = this.isChinese();
-            this.currentKeyboard = this.enNumberSymbolKeyboard;             
+            this.currentKeyboard = this.enNumberSymbolKeyboard;
         }
         this.currentKeyboard.setCapLock(false);
     }
@@ -177,5 +182,21 @@ public class IMESwitch {
         this.isFromChinese = this.isChinese();
         this.currentKeyboard = this.chSymoblKeyboard;
         this.currentKeyboard.setCapLock(false);
+    }
+    
+    public void switchLanguage() {
+        if (this.isNotCharKeyboard()) {
+            if (this.isFromChinese) {
+                this.currentKeyboard = this.englishKeyboard;
+            } else {
+                this.currentKeyboard = this.chineseKeyboard;
+            }
+        } else {
+            if (this.isEnglish()) {
+                this.currentKeyboard = this.chineseKeyboard;
+            } else {
+                this.currentKeyboard = this.englishKeyboard;
+            }
+        }
     }
 }
