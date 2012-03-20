@@ -64,21 +64,21 @@
         <Key android:keyLabel="\u3008"/>
         <Key android:keyLabel="\u3009"/>
         <Key android:keyLabel="\u2014"/>
-        <Key android:codes="-5" android:keyLabel="delete"
+        <Key android:codes="-5" android:keyIcon="@drawable/key_delete"
                 android:keyWidth="20%p" android:isRepeatable="true"
                 android:keyEdgeFlags="right"/>
     </Row>
     
     <Row android:rowEdgeFlags="bottom">
-        <Key android:codes="-3" android:keyLabel="done" 
+        <Key android:codes="-3" android:keyIcon="@drawable/key_done" 
                 android:keyWidth="10%p" android:keyEdgeFlags="left"/>
         <Key android:codes="-300" android:keyIcon="@drawable/key_char" 
                 android:keyWidth="15%p"/>
-        <Key android:codes="32" android:keyLabel="space" 
+        <Key android:codes="32" android:keyIcon="@drawable/key_space" 
                 android:keyWidth="40%p" android:isRepeatable="true"/>
         <Key android:codes="-600" android:keyIcon="@drawable/key_lang"
         		android:keyWidth="15%p"/>
-        <Key android:codes="10" android:keyLabel="return" 
+        <Key android:codes="10" android:keyIcon="@drawable/key_enter" 
                 android:keyWidth="20%p" android:keyEdgeFlags="right"/>
     </Row>
     

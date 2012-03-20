@@ -22,7 +22,7 @@
 */
 -->
 <resources>
-    <dimen name="keychar_size">42sp</dimen>
+    <dimen name="keychar_size">35sp</dimen>
     <dimen name="key_height">70dip</dimen>
     <dimen name="key_height_bottom_row">70dip</dimen>
     <dimen name="strokekey_height">145dip</dimen>
