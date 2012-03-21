@@ -44,10 +44,12 @@
     <Row>
         <Key android:codes="-500" android:keyLabel="\u300e\u2026\uff1b" android:keyEdgeFlags="left"
                 android:keyWidth="20%p"/>
-        <Key android:codes="-400"  android:keyIcon="@drawable/smiles"
-                android:keyWidth="10%p"/>
+        <!--  <Key android:codes="-400"  android:keyIcon="@drawable/smiles"
+                android:keyWidth="10%p"/> -->
         <Key android:keyLabel="\uff0c"
-                android:keyWidth="10%p"/>
+                android:keyWidth="10%p"
+                android:horizontalGap="5%p"
+        />
         <Key android:keyLabel="\u3002"
                 android:keyWidth="10%p"/>
         <Key android:keyLabel="\u3001"
@@ -58,6 +60,7 @@
                 android:keyWidth="10%p"/>
         <Key android:codes="-5" android:keyIcon="@drawable/key_delete"
                 android:isRepeatable="true"
+                android:horizontalGap="5%p"
                 android:keyWidth="20%p" android:keyEdgeFlags="right"/>
     </Row>
        
