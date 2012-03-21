@@ -37,16 +37,18 @@ public class FileImporter {
     private Context ctx;
     private boolean isLibrary = false;
     private SQLiteDatabase database;
+    private int resourceId;
 
-    public FileImporter(Context context, SQLiteDatabase db) {
+    public FileImporter(Context context, SQLiteDatabase db, int resourceId) {
         this.ctx = context;
         this.database = db;
+        this.resourceId = resourceId;
     }
 
-    public void importFileFromResourceId(int resourceId) {
+    public void importFileFromResourceId() {
         try {
             InputStream inputStream = ctx.getResources().openRawResource(
-                    resourceId);
+                    this.resourceId);
             InputStreamReader isr = new InputStreamReader(inputStream, "UTF8");
             BufferedReader reader = new BufferedReader(isr);
 

@@ -26,6 +26,7 @@ import com.linkomnia.android.StrokeFiveKeyboard.R;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.AsyncTask;
 import android.util.Log;
 
 public class Stroke5SQLiteHelper extends SQLiteOpenHelper {
@@ -46,8 +47,8 @@ public class Stroke5SQLiteHelper extends SQLiteOpenHelper {
         Log.d("WANLEUNG", "Create DB");
         try {
             database.execSQL(Stroke5Table.TABLE_CREATE);
-            FileImporter fileimp = new FileImporter(ctx, database);
-            fileimp.importFileFromResourceId(R.raw.stroke5);
+            FileImporter fileimp = new FileImporter(ctx, database, R.raw.stroke5);
+            new ImportFilesTask().execute(fileimp);
         } catch (Exception e) {
             Log.d("WANLEUNG", e.getMessage());
         }
@@ -61,4 +62,20 @@ public class Stroke5SQLiteHelper extends SQLiteOpenHelper {
         db.execSQL(Stroke5Table.TABLE_DROP);
         this.onCreate(db);
     }
+    
+    private class ImportFilesTask extends AsyncTask<FileImporter, Void, Long> {
+        protected Long doInBackground(FileImporter... fims) {
+            int count = fims.length;
+            long totalSize = 0;
+            for (int i = 0; i < count; i++) {
+                totalSize ++;
+                fims[i].importFileFromResourceId();
+            }
+            return totalSize;
+        }
+
+    }
+
 }
+
+
