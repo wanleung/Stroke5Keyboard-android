@@ -120,11 +120,6 @@ public class IMESwitch {
                 result = true;
                 break;
             }
-            case IMEKeyboard.KEYCODE_MODE_CHANGE_SIMLY: {
-                
-                result = true;
-                break;
-            }
             case IMEKeyboard.KEYCODE_MODE_CHANGE_LANG: {
                 this.switchLanguage();
                 result = true;

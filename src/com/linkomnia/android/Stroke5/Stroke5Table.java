@@ -82,6 +82,9 @@ public class Stroke5Table {
 
     public ArrayList<String> searchRecord(String input) {
         ArrayList<String> result = new ArrayList<String>();
+        if (input.length() == 0) {
+            return result;
+        }
         String[] args =  {input+"%"};
         String groupby = " " + Stroke5Table.COLUMN_CHAR + " ";
         String order = Stroke5Table.COLUMN_USAGE+" DESC , "+ Stroke5Table.COLUMN_ID +" ASC ";

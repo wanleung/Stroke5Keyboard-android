@@ -130,6 +130,10 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         if (primaryCode == Keyboard.KEYCODE_DONE) {
             return;
         }
+        if (primaryCode == IMEKeyboard.KEYCODE_MODE_CHANGE_SIMLY) {
+            this.handleSimly();
+            return;
+        }
         this.handleKey(primaryCode, keyCodes);
     }
     
@@ -175,7 +179,8 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         this.charbuffer = new char[5];
         this.strokecount = 0;
         if (this.candidateView != null) {
-            this.updateCandidates();
+            this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
+            this.updateCandidates(new ArrayList<String>());
         }
     }
     
@@ -218,7 +223,8 @@ public class StrokeFiveKeyboard extends InputMethodService implements
             this.charbuffer[this.strokecount++] = c;
         }
         this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
-        updateCandidates();
+        ArrayList<String> words = this.stroke5WordDictionary.searchRecord(new String(this.charbuffer,0,this.strokecount));
+        updateCandidates(words);
     }
     
     private void handleBackspace() {
@@ -226,12 +232,11 @@ public class StrokeFiveKeyboard extends InputMethodService implements
             if (this.strokecount > 1) {
                 this.strokecount -= 1;
                 this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
-                updateCandidates();
+                ArrayList<String> words = this.stroke5WordDictionary.searchRecord(new String(this.charbuffer,0,this.strokecount));
+                updateCandidates(words);
             } else if (this.strokecount > 0) {
                 this.stroktreset();
-                this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
                 //this.setCandidatesViewShown(false);
-                updateCandidates();
             } else {
                 //this.setCandidatesViewShown(false);
                 keyDownUp(KeyEvent.KEYCODE_DEL);
@@ -239,6 +244,10 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         } else {
             keyDownUp(KeyEvent.KEYCODE_DEL);
         }
+    }
+    
+    private void handleSimly() {
+        
     }
     
     private void handleCharacter(int primaryCode, int[] keyCodes) {
@@ -260,14 +269,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
                 new KeyEvent(KeyEvent.ACTION_UP, keyEventCode));
     }
     
-    private void updateCandidates() {
-        this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
-        ArrayList<String> words;
-        if (strokecount > 0) {
-            words = this.stroke5WordDictionary.searchRecord(new String(this.charbuffer,0,this.strokecount));
-        } else {
-            words = new ArrayList<String>();
-        }
+    private void updateCandidates(ArrayList<String> words) {
         if (words.isEmpty()) {
             this.candidateView.setSuggestion(words);
             //setCandidatesViewShown(false);
