@@ -133,7 +133,6 @@ public class CandidateView extends LinearLayout {
         show_rem = (this.wordList.size()-1) % result_max;
         
         show_max = show_div;//show_rem == 0?show_div-1:show_div;
-        Log.d("WANLEUNG", this.wordList.size() + " " + show_div + " " + show_rem + " " + show_max);
         this.showWords();
     }
     
@@ -175,12 +174,10 @@ public class CandidateView extends LinearLayout {
     protected void showWords() {
         int show = (this.wordlevel == show_max)?show_rem:result_max;
         for (int i = 0; i < result_max; i++) {
-            //Log.d("WANLEUNG", this.wordList.size() + " wordlevel " + wordlevel + " show " + show + " index " + (this.wordlevel * 5 + i));
             Button b = this.wordbuttonList.get(i);
             if (i > show) {
                 b.setText("\u3000");
             } else {
-                Log.d("WANLEUNG", (this.wordlevel * result_max + i) + "");
                 b.setText(this.wordList.get(this.wordlevel * result_max + i));
             }
         }

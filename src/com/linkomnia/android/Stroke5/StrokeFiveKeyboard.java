@@ -82,16 +82,13 @@ public class StrokeFiveKeyboard extends InputMethodService implements
 
     public void onStartInput(EditorInfo attribute, boolean restarting) {
         super.onStartInput(attribute, restarting);
-        Log.d("WANLEUNG", "onStartInput");
         this.strokereset();
         //this.mInputView.closing();
     }
     
     public void onFinishInput() {
-        if (inputView != null) {
-            inputView.closing();
-        }
-        Log.d("WANLEUNG", "onFinishInput");
+        this.strokereset();
+        /// TODO: SAVE
         super.onFinishInput();
 
     }
@@ -107,16 +104,13 @@ public class StrokeFiveKeyboard extends InputMethodService implements
             int newSelStart, int newSelEnd,
             int candidatesStart, int candidatesEnd) {
         super.onUpdateSelection(oldSelStart, oldSelEnd, newSelStart, newSelEnd, candidatesStart, candidatesEnd);
-        Log.d("WANLEUNG", "onUpdateSelection");
     }
     
     public void onDisplayCompletions(CompletionInfo[] completions) {
         super.onDisplayCompletions(completions);
-        Log.d("WANLEUNG", "onDisplayCompletions");
     }
     
     public void onKey(int primaryCode, int[] keyCodes) {
-        // TODO Auto-generated method stub
         if (imeSwitch.handleKey(primaryCode)) {
             this.strokereset();
             this.inputView.setKeyboard(imeSwitch.getCurrentKeyboard());
@@ -129,6 +123,9 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         if (primaryCode == Keyboard.KEYCODE_DELETE) {
             this.handleBackspace();
             return;
+        }
+        if (primaryCode == IMEKeyboard.KEYCODE_ENTER) {
+            this.handleEnter();
         }
         if (primaryCode == Keyboard.KEYCODE_DONE) {
             return;
@@ -167,7 +164,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     public void swipeUp() {
         // TODO Auto-generated method stub
     }
-
+    
     public void onDestroy() {
         this.inputView.closing();
         this.stroke5WordDictionary.close();
@@ -256,6 +253,9 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         getCurrentInputConnection().commitText(String.format("%c", primaryCode), 1);
     }
 
+    private void handleEnter() {
+        this.keyDownUp(KeyEvent.KEYCODE_ENTER);
+    }
     
     private void keyDownUp(int keyEventCode) {
         getCurrentInputConnection().sendKeyEvent(

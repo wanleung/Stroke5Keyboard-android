@@ -26,6 +26,7 @@ import android.inputmethodservice.Keyboard;
 
 public class IMEKeyboard extends Keyboard {
     
+    static final int KEYCODE_ENTER = 10;
     static final int KEYCODE_CAPLOCK = -200;
     static final int KEYCODE_MODE_CHANGE_CHAR = -300;
     static final int KEYCODE_MODE_CHANGE_SIMLEY = -400;
