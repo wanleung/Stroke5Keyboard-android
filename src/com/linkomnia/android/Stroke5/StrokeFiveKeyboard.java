@@ -26,6 +26,7 @@ import java.util.List;
 
 import com.linkomnia.android.StrokeFiveKeyboard.R;
 
+import android.app.AlertDialog;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.Keyboard.Key;
@@ -35,6 +36,8 @@ import android.util.Log;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.inputmethod.CompletionInfo;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
@@ -80,7 +83,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     public void onStartInput(EditorInfo attribute, boolean restarting) {
         super.onStartInput(attribute, restarting);
         Log.d("WANLEUNG", "onStartInput");
-        this.stroktreset();
+        this.strokereset();
         //this.mInputView.closing();
     }
     
@@ -115,7 +118,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     public void onKey(int primaryCode, int[] keyCodes) {
         // TODO Auto-generated method stub
         if (imeSwitch.handleKey(primaryCode)) {
-            this.stroktreset();
+            this.strokereset();
             this.inputView.setKeyboard(imeSwitch.getCurrentKeyboard());
             return;
         }
@@ -175,7 +178,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         super.onDestroy();
     }
     
-    private void stroktreset() {
+    private void strokereset() {
         this.charbuffer = new char[5];
         this.strokecount = 0;
         if (this.candidateView != null) {
@@ -235,7 +238,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
                 ArrayList<String> words = this.stroke5WordDictionary.searchRecord(new String(this.charbuffer,0,this.strokecount));
                 updateCandidates(words);
             } else if (this.strokecount > 0) {
-                this.stroktreset();
+                this.strokereset();
                 //this.setCandidatesViewShown(false);
             } else {
                 //this.setCandidatesViewShown(false);
@@ -251,7 +254,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
     
     private void handleCharacter(int primaryCode, int[] keyCodes) {
-        this.stroktreset();
+        this.strokereset();
         if (isInputViewShown()) {
             if (inputView.isShifted()) {
                 primaryCode = Character.toUpperCase(primaryCode);
@@ -280,14 +283,14 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
     
     public void onChooseWord(String word) {
-        this.stroktreset();
+        this.strokereset();
         InputConnection ic = getCurrentInputConnection();        
         ic.commitText(word, 1);
         //setCandidatesViewShown(false);
     }
     
     private void handleClose() {
-        this.stroktreset();
+        this.strokereset();
         requestHideSelf(0);
         inputView.closing();
     }
