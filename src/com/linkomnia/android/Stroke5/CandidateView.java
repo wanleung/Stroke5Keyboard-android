@@ -167,7 +167,7 @@ public class CandidateView extends LinearLayout {
     }
     
     protected void showWords() {
-        if (this.wordbuttonList.size() == 0) {
+        if (this.wordList.size() == 0) {
             return;
         }
         int show = (this.wordlevel == show_max)?show_rem:result_max;
