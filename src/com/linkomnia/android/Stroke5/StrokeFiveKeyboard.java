@@ -97,6 +97,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         super.onStartInputView(attribute, restarting);
         this.imeSwitch.init();
         this.inputView.setKeyboard(this.imeSwitch.getCurrentKeyboard());
+        this.setCandidatesViewShown(true);
     }
     
     public void onUpdateSelection(int oldSelStart, int oldSelEnd,
@@ -229,9 +230,10 @@ public class StrokeFiveKeyboard extends InputMethodService implements
             } else if (this.strokecount > 0) {
                 this.stroktreset();
                 this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
-                this.setCandidatesViewShown(false);
+                //this.setCandidatesViewShown(false);
+                updateCandidates();
             } else {
-                this.setCandidatesViewShown(false);
+                //this.setCandidatesViewShown(false);
                 keyDownUp(KeyEvent.KEYCODE_DEL);
             }
         } else {
@@ -259,6 +261,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
     
     private void updateCandidates() {
+        this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
         ArrayList<String> words;
         if (strokecount > 0) {
             words = this.stroke5WordDictionary.searchRecord(new String(this.charbuffer,0,this.strokecount));
@@ -266,7 +269,8 @@ public class StrokeFiveKeyboard extends InputMethodService implements
             words = new ArrayList<String>();
         }
         if (words.isEmpty()) {
-            setCandidatesViewShown(false);
+            this.candidateView.setSuggestion(words);
+            //setCandidatesViewShown(false);
         } else {
             this.candidateView.setSuggestion(words);
             setCandidatesViewShown(true);
@@ -277,7 +281,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         this.stroktreset();
         InputConnection ic = getCurrentInputConnection();        
         ic.commitText(word, 1);
-        setCandidatesViewShown(false);
+        //setCandidatesViewShown(false);
     }
     
     private void handleClose() {

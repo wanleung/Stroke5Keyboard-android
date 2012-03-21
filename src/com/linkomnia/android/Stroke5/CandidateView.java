@@ -69,7 +69,7 @@ public class CandidateView extends LinearLayout {
     protected void onFinishInflate() {
         super.onFinishInflate();
         result_max = Integer.parseInt(this.getResources().getString(R.string.result_max));
-        
+        this.wordList = new ArrayList<String>();
         this.setBackgroundColor(getResources().getColor(R.color.candidate_background));
         
         this.leftButton = (Button) findViewById(R.id.arrow_left);
@@ -167,6 +167,9 @@ public class CandidateView extends LinearLayout {
     }
     
     protected void showWords() {
+        if (this.wordbuttonList.size() == 0) {
+            return;
+        }
         int show = (this.wordlevel == show_max)?show_rem:result_max;
         for (int i = 0; i < result_max; i++) {
             Log.d("WANLEUNG", this.wordList.size() + " wordlevel " + wordlevel + " show " + show + " index " + (this.wordlevel * 5 + i));

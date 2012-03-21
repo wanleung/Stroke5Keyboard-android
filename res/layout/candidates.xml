@@ -24,13 +24,24 @@
 <com.linkomnia.android.Stroke5.CandidateView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/candidate_view"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/candidates_view_height"
         android:gravity="fill"
         
         >
 
+    <LinearLayout
+        android:id="@+id/bottombar"
+        android:orientation="horizontal" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="fill"
+        android:layout_weight="@string/candidates_bottom_weight"
+        >
+        
+    </LinearLayout>
+    
     <LinearLayout 
         android:id="@+id/topbar"
         android:orientation="horizontal" 
@@ -69,17 +80,6 @@
         	android:textColor="@color/candidate_normal"
         	android:background="@drawable/button"
         	/>
-        
-    </LinearLayout>
-    
-    <LinearLayout
-        android:id="@+id/bottombar"
-        android:orientation="horizontal" 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="fill"
-        android:layout_weight="1"
-        >
         
     </LinearLayout>
 
