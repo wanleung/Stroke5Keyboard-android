@@ -37,6 +37,7 @@ public class IMESwitch {
     private IMEKeyboard enSymoblShiftKeyboard;
     private IMEKeyboard chSymoblKeyboard;
     private IMEKeyboard chineseKeyboard;
+    private IMEKeyboard simleyKeyboard;
     
     private boolean isFromChinese;
     
@@ -47,6 +48,7 @@ public class IMESwitch {
         this.enSymoblShiftKeyboard = new IMEKeyboard(this.ctx, R.xml.symbols_en_shift);
         this.chSymoblKeyboard = new IMEKeyboard(this.ctx, R.xml.symbols_ch);
         this.chineseKeyboard = new IMEKeyboard(this.ctx, R.xml.stroke5);
+        this.simleyKeyboard = new IMEKeyboard(this.ctx, R.xml.simley);
     }
     
     public void init() {
@@ -78,11 +80,15 @@ public class IMESwitch {
     }
     
     public boolean isChineseSymbol() {
-        return this.chSymoblKeyboard == this.currentKeyboard; 
+        return this.chSymoblKeyboard == this.currentKeyboard;
+    }
+    
+    public boolean isSimley() {
+        return this.simleyKeyboard == this.currentKeyboard;
     }
     
     public boolean isNotCharKeyboard() {
-        return (this.isNumberSymbol() || this.isSymbol() || this.isChineseSymbol());
+        return (this.isNumberSymbol() || this.isSymbol() || this.isChineseSymbol() || this.isSimley());
     }
        
     public boolean handleKey(int keyCode) {
@@ -122,6 +128,11 @@ public class IMESwitch {
             }
             case IMEKeyboard.KEYCODE_MODE_CHANGE_LANG: {
                 this.switchLanguage();
+                result = true;
+                break;
+            }
+            case IMEKeyboard.KEYCODE_MODE_CHANGE_SIMLEY: {
+                this.switchToSimley();
                 result = true;
                 break;
             }
@@ -193,5 +204,11 @@ public class IMESwitch {
                 this.currentKeyboard = this.englishKeyboard;
             }
         }
+    }
+    
+    public void switchToSimley() {
+        this.isFromChinese = this.isChinese();
+        this.currentKeyboard = this.simleyKeyboard;
+        this.currentKeyboard.setCapLock(false);
     }
 }

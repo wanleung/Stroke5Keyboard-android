@@ -133,10 +133,6 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         if (primaryCode == Keyboard.KEYCODE_DONE) {
             return;
         }
-        if (primaryCode == IMEKeyboard.KEYCODE_MODE_CHANGE_SIMLY) {
-            this.handleSimly();
-            return;
-        }
         this.handleKey(primaryCode, keyCodes);
     }
     
@@ -247,10 +243,6 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         } else {
             keyDownUp(KeyEvent.KEYCODE_DEL);
         }
-    }
-    
-    private void handleSimly() {
-        
     }
     
     private void handleCharacter(int primaryCode, int[] keyCodes) {

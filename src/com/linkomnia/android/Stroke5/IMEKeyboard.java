@@ -28,7 +28,7 @@ public class IMEKeyboard extends Keyboard {
     
     static final int KEYCODE_CAPLOCK = -200;
     static final int KEYCODE_MODE_CHANGE_CHAR = -300;
-    static final int KEYCODE_MODE_CHANGE_SIMLY = -400;
+    static final int KEYCODE_MODE_CHANGE_SIMLEY = -400;
     static final int KEYCODE_MODE_CHANGE_CHSYMBOL = -500;
     static final int KEYCODE_MODE_CHANGE_LANG = -600;
     
