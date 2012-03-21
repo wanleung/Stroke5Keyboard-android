@@ -123,6 +123,12 @@ public class CandidateView extends LinearLayout {
     public void setSuggestion(ArrayList<String> list) {
         wordlevel = 0;
         this.wordList = list;
+        
+        if (this.wordList.size() == 0) {
+            this.cleanWords();
+            return;
+        }
+        
         show_div = (this.wordList.size()-1) / result_max;
         show_rem = (this.wordList.size()-1) % result_max;
         
@@ -167,12 +173,9 @@ public class CandidateView extends LinearLayout {
     }
     
     protected void showWords() {
-        if (this.wordList.size() == 0) {
-            return;
-        }
         int show = (this.wordlevel == show_max)?show_rem:result_max;
         for (int i = 0; i < result_max; i++) {
-            Log.d("WANLEUNG", this.wordList.size() + " wordlevel " + wordlevel + " show " + show + " index " + (this.wordlevel * 5 + i));
+            //Log.d("WANLEUNG", this.wordList.size() + " wordlevel " + wordlevel + " show " + show + " index " + (this.wordlevel * 5 + i));
             Button b = this.wordbuttonList.get(i);
             if (i > show) {
                 b.setText("\u3000");
@@ -180,6 +183,14 @@ public class CandidateView extends LinearLayout {
                 Log.d("WANLEUNG", (this.wordlevel * result_max + i) + "");
                 b.setText(this.wordList.get(this.wordlevel * result_max + i));
             }
+        }
+        this.invalidate();
+    }
+    
+    protected void cleanWords() {
+        for (int i = 0; i < result_max; i++) {
+            Button b = this.wordbuttonList.get(i);
+            b.setText("\u3000");
         }
         this.invalidate();
     }
