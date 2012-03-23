@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" 
-        package="com.linkomnia.android.Stroke5">
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="13" />
+        package="com.linkomnia.android.Stroke5"
+        android:versionCode="1"
+      	android:versionName="0.1">
+        >
+    <uses-sdk android:minSdkVersion="10" />
     <application android:label="@string/ime_name"
-        	android:icon="@drawable/ic_launcher">
+        	android:icon="@drawable/ic_launcher"
+        	android:debuggable="false"
+        	>
         <service android:name="com.linkomnia.android.Stroke5.StrokeFiveKeyboard"
                 android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
