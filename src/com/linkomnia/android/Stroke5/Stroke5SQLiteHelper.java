@@ -21,7 +21,7 @@
 
 package com.linkomnia.android.Stroke5;
 
-import com.linkomnia.android.StrokeFiveKeyboard.R;
+import com.linkomnia.android.Stroke5.R;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
