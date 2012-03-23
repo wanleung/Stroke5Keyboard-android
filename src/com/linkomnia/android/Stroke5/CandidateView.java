@@ -36,7 +36,7 @@ import android.widget.ScrollView;
 
 import java.math.*;
 
-import com.linkomnia.android.StrokeFiveKeyboard.R;
+import com.linkomnia.android.Stroke5.R;
 
 public class CandidateView extends LinearLayout {
     
@@ -68,6 +68,7 @@ public class CandidateView extends LinearLayout {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
+        
         result_max = Integer.parseInt(this.getResources().getString(R.string.result_max));
         this.wordList = new ArrayList<String>();
         this.setBackgroundColor(getResources().getColor(R.color.candidate_background));
@@ -92,15 +93,7 @@ public class CandidateView extends LinearLayout {
             b.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.button));
             this.wordbuttonList.add(b);
             this.wordbar.addView(b, lp);
-            b.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    String str = ((Button)v).getText().toString();
-                    if (!(str.isEmpty() || str.equals("\u3000"))) {
-                        mDelegate.onChooseWord(((Button)v).getText().toString());
-                        wordlevel = 0;
-                    }
-                }
-            });
+            b.setOnClickListener(new WordButtonOnClickListener(this));
 
         }
         
@@ -113,11 +106,20 @@ public class CandidateView extends LinearLayout {
             this.inputBox.add(b);
             this.bottombar.addView(b, lp);
         }
+        
     }
 
     
     public void setDelegate(StrokeFiveKeyboard target) {
         mDelegate = target;
+    }
+    
+    public StrokeFiveKeyboard getDelegate() {
+        return this.mDelegate;
+    }
+    
+    public void didChooseWord() {
+        this.wordlevel = 0;
     }
     
     public void setSuggestion(ArrayList<String> list) {
@@ -172,6 +174,10 @@ public class CandidateView extends LinearLayout {
     }
     
     protected void showWords() {
+        if (this.wordList.size() == 0) {
+            this.cleanWords();
+            return;
+        }
         int show = (this.wordlevel == show_max)?show_rem:result_max;
         for (int i = 0; i < result_max; i++) {
             Button b = this.wordbuttonList.get(i);
@@ -221,4 +227,21 @@ class ButtonOnClickListener implements View.OnClickListener {
         parnet.showWords();
     }
     
+}
+
+class WordButtonOnClickListener implements View.OnClickListener {
+    private CandidateView parnet;
+    
+    public WordButtonOnClickListener(CandidateView p) {
+        this.parnet = p;
+    }
+    
+    public void onClick(View v) {
+        // TODO Auto-generated method stub
+        String str = ((Button)v).getText().toString();
+        if (!(str.isEmpty() || str.equals("\u3000"))) {
+            parnet.getDelegate().onChooseWord(((Button)v).getText().toString());
+            parnet.didChooseWord();            
+        }
+    }
 }

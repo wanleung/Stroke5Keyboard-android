@@ -24,7 +24,7 @@ package com.linkomnia.android.Stroke5;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.linkomnia.android.StrokeFiveKeyboard.R;
+import com.linkomnia.android.Stroke5.R;
 
 import android.app.AlertDialog;
 import android.inputmethodservice.InputMethodService;
@@ -49,8 +49,9 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     private IMEKeyboardView inputView;
     private CandidateView candidateView;
     
-    private Stroke5Table stroke5WordDictionary;
-     
+    //private Stroke5Table stroke5WordDictionary;
+    private WordProcessor wordProcessor; 
+    
     private IMESwitch imeSwitch;
     
     private char [] charbuffer = new char[5];
@@ -59,8 +60,10 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     @Override
     public void onCreate() {
         super.onCreate();
-        stroke5WordDictionary = new Stroke5Table(this, false);
-        stroke5WordDictionary.open();
+        //stroke5WordDictionary = new Stroke5Table(this, false);
+        //stroke5WordDictionary.open();
+        this.wordProcessor = new WordProcessor(this);
+        this.wordProcessor.init();
     }
 
     public void onInitializeInterface() {
@@ -111,6 +114,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
     
     public void onKey(int primaryCode, int[] keyCodes) {
+        this.wordProcessor.getChinesePhraseDictLinkedHashMap("(");
         if (imeSwitch.handleKey(primaryCode)) {
             this.strokereset();
             this.inputView.setKeyboard(imeSwitch.getCurrentKeyboard());
@@ -167,7 +171,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     
     public void onDestroy() {
         this.inputView.closing();
-        this.stroke5WordDictionary.close();
+        //this.stroke5WordDictionary.close();
         super.onDestroy();
     }
     
@@ -219,7 +223,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
             this.charbuffer[this.strokecount++] = c;
         }
         this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
-        ArrayList<String> words = this.stroke5WordDictionary.searchRecord(new String(this.charbuffer,0,this.strokecount));
+        ArrayList<String> words = this.wordProcessor.getChineseWordDictArrayList(new String(this.charbuffer,0,this.strokecount));
         updateCandidates(words);
     }
     
@@ -228,7 +232,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
             if (this.strokecount > 1) {
                 this.strokecount -= 1;
                 this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
-                ArrayList<String> words = this.stroke5WordDictionary.searchRecord(new String(this.charbuffer,0,this.strokecount));
+                ArrayList<String> words = this.wordProcessor.getChineseWordDictArrayList(new String(this.charbuffer,0,this.strokecount));
                 updateCandidates(words);
             } else if (this.strokecount > 0) {
                 this.strokereset();
@@ -236,6 +240,7 @@ public class StrokeFiveKeyboard extends InputMethodService implements
             } else {
                 //this.setCandidatesViewShown(false);
                 keyDownUp(KeyEvent.KEYCODE_DEL);
+                this.strokereset();
             }
         } else {
             keyDownUp(KeyEvent.KEYCODE_DEL);
@@ -275,9 +280,12 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
     
     public void onChooseWord(String word) {
-        this.strokereset();
         InputConnection ic = getCurrentInputConnection();        
         ic.commitText(word, 1);
+        this.strokereset();
+        if (this.wordProcessor.getChinesePhraseDictLinkedHashMap(word) != null) {
+            this.candidateView.setSuggestion(new ArrayList<String>(this.wordProcessor.getChinesePhraseDictLinkedHashMap(word)));
+        }
         //setCandidatesViewShown(false);
     }
     
