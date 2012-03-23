@@ -5,48 +5,37 @@ import java.io.FileOutputStream;
 import java.io.DataInputStream;
 import java.io.ObjectOutputStream;
 import java.io.InputStreamReader;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
+import java.util.concurrent.ConcurrentSkipListMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class BuildDictionary {
 
     private boolean isLibrary = false;
     private String filename;
 
-    private LinkedHashMap<String, LinkedHashMap> wordDict;
+    private ConcurrentSkipListMap<String, CopyOnWriteArrayList<String>> wordDict;
 
     public BuildDictionary(String filename) {
         this.filename = filename;
-        wordDict = new LinkedHashMap<String, LinkedHashMap>();
+        wordDict = new ConcurrentSkipListMap<String, CopyOnWriteArrayList<String>>();
     }
 
     private void insert(String w) {
-        String key = w.substring(0,1);
-        String word = w.substring(1,w.length());
-        LinkedHashMap<String, LinkedHashMap> set = wordDict.get(key);
-        if (set == null) {
-            set = new LinkedHashMap<String, LinkedHashMap>();
-            wordDict.put(key,set);
-        }
-        //set.put(word, null);
-        insert(set, word);
-    }
-
-    private void insert(LinkedHashMap<String, LinkedHashMap> hash, String w) {
-        if (w.length() > 0) {
-            String key = w.substring(0,1);
-            String word = w.substring(1,w.length());
-            LinkedHashMap<String, LinkedHashMap> set = hash.get(key);
+        for (int i = 0; i < w.length()-1; i++) {
+            String key = w.substring(i,i+1);
+            String word = w.substring(i+1, i+2);
+            CopyOnWriteArrayList<String> set = wordDict.get(key);
             if (set == null) {
-                set = new LinkedHashMap<String, LinkedHashMap>();
-                hash.put(key,set);
+                set = new CopyOnWriteArrayList<String>();
+                wordDict.put(key, set);
             }
-            //set.put(word, null);
-            insert(set, word);
+            if (! set.contains(word)) {
+                set.add(word);
+            }
         }
     }
 
-    public LinkedHashMap<String, LinkedHashMap> getWordDict() {
+    public ConcurrentSkipListMap<String, CopyOnWriteArrayList<String>> getWordDict() {
         return wordDict;
     }
 
