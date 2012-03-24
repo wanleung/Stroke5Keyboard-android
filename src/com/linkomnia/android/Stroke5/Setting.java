@@ -21,6 +21,7 @@
 package com.linkomnia.android.Stroke5;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
@@ -52,6 +53,11 @@ public class Setting extends PreferenceActivity {
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle(getString(R.string.ime_name)+" v"+getString(R.string.ime_version));
         dialog.setView(aboutView);
+        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                //Setting.this.finish();
+            }
+        });
         dialog.show();
     }
 }
