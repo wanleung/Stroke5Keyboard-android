@@ -2,7 +2,6 @@
 ### gcin
 ###
 ### Copyright (C) 1995-2012  Edward Der-Hua Liu, Hsin-Chu, Taiwan
-### plus all the contributors in http://cle.linux.org.tw/trac
 ###
 ### This library is free software; you can redistribute it and/or
 ### modify it under the terms of the GNU Lesser General Public
@@ -19,7 +18,7 @@
 ### Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 ###
 ### --------------------------------------------------------------
-### This File is branch out from gcin version 2.7.5
+### This File is branch out from gcin version 2.7.5 on 20 March 2012
 ### for the usage of Stroke5 Chinese Input Method on Android
 ###
 ### You can get the source from here: http://cle.linux.org.tw/gcin/download/gcin-2.7.5.tar.xz
@@ -27,6 +26,16 @@
 ### For more details, please visit: http://cle.linux.org.tw/trac 
 ###
 %dictdef begin
+### The following are modified by Wan Leung since 22 March 2012
+巴士 XXX
+的士 XXX
+小巴 XXX
+天星小輪 XXX
+城巴 XXX
+新巴 XXX
+九巴 XXX
+中巴 XXX
+### Above this line are modified since 22 March 2012
 3倍 3 ㄅㄟ4 0
 阿Q ㄚ ㄟ 0
 阿爾巴尼亞 ㄚ ㄦ3 ㄅㄚ ㄋㄧ2 ㄧㄚ3 0
@@ -42814,7 +42823,4 @@ C型肝炎 ㄒ ㄒㄧㄥ2 ㄍㄢ ㄧㄢ2 0
 同鄉會 ㄊㄨㄥ2 ㄒㄧㄤ ㄏㄨㄟ4 0
 最容易 ㄗㄨㄟ4 ㄖㄨㄥ2 ㄧ4 0
 現在是 ㄒㄧㄢ4 ㄗㄞ4 ㄕ4 0
-巴士
-的士
-小巴
 %dictdef end
