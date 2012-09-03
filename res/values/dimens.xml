@@ -22,8 +22,8 @@
 -->
 <resources>
     <dimen name="keychar_size">20sp</dimen>
-    <dimen name="key_height">35dip</dimen>
-    <dimen name="key_height_bottom_row">35dip</dimen>
+    <dimen name="key_height">70dip</dimen>
+    <dimen name="key_height_bottom_row">70dip</dimen>
     <dimen name="key_verticalgap">0dip</dimen>
     <dimen name="strokekey_height">70dip</dimen>
     <dimen name="candidate_font_height">20sp</dimen>
