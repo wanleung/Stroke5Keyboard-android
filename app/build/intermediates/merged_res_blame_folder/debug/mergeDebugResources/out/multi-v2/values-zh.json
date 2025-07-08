@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.linkomnia.android.Stroke5.app-mergeDebugResources-26:/values-zh/values-zh.xml",
+            "map": [
+                {
+                    "source": "/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/res/values-zh/strings.xml",
+                    "from": {
+                        "startLines": "23,24",
+                        "startColumns": "5,5",
+                        "startOffsets": "861,909",
+                        "endColumns": "47,45",
+                        "endOffsets": "903,949"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,102",
+                        "endColumns": "46,44",
+                        "endOffsets": "97,142"
+                    }
+                }
+            ]
+        }
+    ]
+}

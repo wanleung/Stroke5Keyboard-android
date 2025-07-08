@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.linkomnia.android.Stroke5.app-mergeDebugResources-26:/values-xlarge-v4/values-xlarge-v4.xml",
+            "map": [
+                {
+                    "source": "/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/res/values-xlarge/dimens.xml",
+                    "from": {
+                        "startLines": "28,29,24,25,26,23,27",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "1098,1151,904,947,1001,860,1048",
+                        "endColumns": "52,55,42,53,46,43,49",
+                        "endOffsets": "1146,1202,942,996,1043,899,1093"
+                    },
+                    "to": {
+                        "startLines": "8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "473,526,582,625,679,726,770",
+                        "endColumns": "52,55,42,53,46,43,49",
+                        "endOffsets": "521,577,620,674,721,765,815"
+                    }
+                },
+                {
+                    "source": "/home/wanleung/.gradle/caches/8.13/transforms/9f4ccd3212b97d78ca5085eb75c4d8ac/transformed/appcompat-1.6.1/res/values-xlarge-v4/values-xlarge-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,126,197,267,337,405",
+                        "endColumns": "70,70,69,69,67,67",
+                        "endOffsets": "121,192,262,332,400,468"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="candidate_background">#BB000000</color>
+    <color name="candidate_normal">#ffffffff</color>
+    <color name="candidate_other">#ff808080</color>
+    <color name="candidate_recommended">#FFE35900</color>
+    <dimen name="candidate_font_height">20sp</dimen>
+    <dimen name="candidates_view_height">35dip</dimen>
+    <dimen name="key_height">70dip</dimen>
+    <dimen name="key_height_bottom_row">70dip</dimen>
+    <dimen name="key_verticalgap">0dip</dimen>
+    <dimen name="keychar_size">20sp</dimen>
+    <dimen name="strokekey_height">70dip</dimen>
+    <string name="candidates_bottom_weight">3</string>
+    <string name="database_version">1</string>
+    <string name="ime_name">Stroke5 Keyboard</string>
+    <string name="ime_version">0.1</string>
+    <string name="pref_about">About</string>
+    <string name="result_max">5</string>
+</resources>

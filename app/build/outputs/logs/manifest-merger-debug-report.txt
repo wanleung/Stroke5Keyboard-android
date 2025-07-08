@@ -1,0 +1,255 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:23:1-50:12
+INJECTED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:23:1-50:12
+INJECTED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:23:1-50:12
+INJECTED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:23:1-50:12
+MERGED from [com.google.android.material:material:1.8.0] /home/wanleung/.gradle/caches/8.13/transforms/89c150bd4f9dd891cb3ddb48689f94c6/transformed/material-1.8.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/wanleung/.gradle/caches/8.13/transforms/7f66a4a258f636fb84431e3b2ad87d2f/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/wanleung/.gradle/caches/8.13/transforms/deab4045a542fefd6a2d8b199786312f/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /home/wanleung/.gradle/caches/8.13/transforms/9f4ccd3212b97d78ca5085eb75c4d8ac/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/da37d132185ed27c1c75821ab23fb60c/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] /home/wanleung/.gradle/caches/8.13/transforms/b6d2d1fa6317cebd917372cb57742398/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.0] /home/wanleung/.gradle/caches/8.13/transforms/16b269b2fd0c154b96738093d980490d/transformed/jetified-activity-1.6.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/0ebdb6c5cd04141622077eb48ba32e82/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/1b4c87c46fb9550103efed6aa764f445/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/a821ffa709e020f953e0c9f322106aba/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/a3108c1c59b46736c895ab3c89d5aae6/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/ed20218b9c92f7ec8fd30201f21f3bee/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/f32668481dc95265ab4455169acf6ba4/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/aeb3e8ee42c2af94b9712e70c8a9bd82/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/e2f488867473931bacf7d74ffb7e0cab/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/f28e7fb2cbc8affc0e7304e4bbec3b58/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /home/wanleung/.gradle/caches/8.13/transforms/86c5d5fcca3635418f4c5d248be763d2/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /home/wanleung/.gradle/caches/8.13/transforms/98963151f51a91a3f77ac71d4f20c99e/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/386436eb15f2a6ed3e0b42743092dc3a/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/f9a895950b616dfa7e5aa7af0114f835/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/3057c1fd72d1645568d70dd96f90106b/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/ef33e05e5133a112c6cc8797453b8a17/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/4d8a1eff85be8cf5617f063d344bac8a/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /home/wanleung/.gradle/caches/8.13/transforms/53906f106ffc6093ff6f6b4fed8ea85c/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /home/wanleung/.gradle/caches/8.13/transforms/4c8843efe8cd9eced539ef079cdcb976/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/5bde49fadbaf0f3265b39c4b5ca2fd15/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/fb32ea96f6e2e5e5367b8c85544cc4d0/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/9fd03fa9ef81c27f51a7215de25f49d1/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/3c49456e0a380355fa746a924056ccf9/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/86b97bf4e36882146a24065f7a7b26b9/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/wanleung/.gradle/caches/8.13/transforms/c9565e35d26623c5782dfe79ba7ace66/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /home/wanleung/.gradle/caches/8.13/transforms/596881bf4e52b8dca885b3d27ef9aff3/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/wanleung/.gradle/caches/8.13/transforms/6cdf3b301057350cbd5685c2a0e4976b/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/99b6a52dcee8cf4582415a4f71502ea0/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/8466d4ef212ac1c6dc08c0b6f9141437/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/974558053e172ebbdc10993b111d52e8/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/3110a38ff0bd5ea4f95a0f5b01160d70/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/wanleung/.gradle/caches/8.13/transforms/4dcb73d6529b6faa07265bbbd72c20da/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+	package
+		INJECTED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:23:11-69
+uses-permission#android.permission.VIBRATE
+ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:25:5-66
+	android:name
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:25:22-63
+application
+ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:26:5-49:19
+INJECTED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:26:5-49:19
+MERGED from [com.google.android.material:material:1.8.0] /home/wanleung/.gradle/caches/8.13/transforms/89c150bd4f9dd891cb3ddb48689f94c6/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.8.0] /home/wanleung/.gradle/caches/8.13/transforms/89c150bd4f9dd891cb3ddb48689f94c6/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/wanleung/.gradle/caches/8.13/transforms/deab4045a542fefd6a2d8b199786312f/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/wanleung/.gradle/caches/8.13/transforms/deab4045a542fefd6a2d8b199786312f/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /home/wanleung/.gradle/caches/8.13/transforms/53906f106ffc6093ff6f6b4fed8ea85c/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /home/wanleung/.gradle/caches/8.13/transforms/53906f106ffc6093ff6f6b4fed8ea85c/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/9fd03fa9ef81c27f51a7215de25f49d1/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/9fd03fa9ef81c27f51a7215de25f49d1/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/86b97bf4e36882146a24065f7a7b26b9/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/86b97bf4e36882146a24065f7a7b26b9/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+	android:label
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:27:9-41
+	android:icon
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:28:9-45
+	android:allowBackup
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:29:9-35
+	android:theme
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:30:9-67
+service#com.linkomnia.android.Stroke5.StrokeFiveKeyboard
+ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:31:9-38:19
+	android:exported
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:33:17-41
+	android:permission
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:32:17-74
+	android:name
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:31:18-81
+intent-filter#action:name:android.view.InputMethod
+ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:34:13-36:29
+action#android.view.InputMethod
+ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:35:17-67
+	android:name
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:35:25-64
+meta-data#android.view.im
+ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:37:13-88
+	android:resource
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:37:55-85
+	android:name
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:37:24-54
+activity#com.linkomnia.android.Stroke5.Setting
+ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:40:9-46:20
+	android:label
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:41:17-49
+	android:exported
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:42:17-40
+	android:name
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:40:19-41
+intent-filter#action:name:android.intent.action.MAIN
+ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:43:13-45:29
+action#android.intent.action.MAIN
+ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:44:17-68
+	android:name
+		ADDED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:44:25-66
+uses-sdk
+INJECTED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml
+INJECTED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.8.0] /home/wanleung/.gradle/caches/8.13/transforms/89c150bd4f9dd891cb3ddb48689f94c6/transformed/material-1.8.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.8.0] /home/wanleung/.gradle/caches/8.13/transforms/89c150bd4f9dd891cb3ddb48689f94c6/transformed/material-1.8.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/wanleung/.gradle/caches/8.13/transforms/7f66a4a258f636fb84431e3b2ad87d2f/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/wanleung/.gradle/caches/8.13/transforms/7f66a4a258f636fb84431e3b2ad87d2f/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/wanleung/.gradle/caches/8.13/transforms/deab4045a542fefd6a2d8b199786312f/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/wanleung/.gradle/caches/8.13/transforms/deab4045a542fefd6a2d8b199786312f/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.6.1] /home/wanleung/.gradle/caches/8.13/transforms/9f4ccd3212b97d78ca5085eb75c4d8ac/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /home/wanleung/.gradle/caches/8.13/transforms/9f4ccd3212b97d78ca5085eb75c4d8ac/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/da37d132185ed27c1c75821ab23fb60c/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/da37d132185ed27c1c75821ab23fb60c/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /home/wanleung/.gradle/caches/8.13/transforms/b6d2d1fa6317cebd917372cb57742398/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /home/wanleung/.gradle/caches/8.13/transforms/b6d2d1fa6317cebd917372cb57742398/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.0] /home/wanleung/.gradle/caches/8.13/transforms/16b269b2fd0c154b96738093d980490d/transformed/jetified-activity-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] /home/wanleung/.gradle/caches/8.13/transforms/16b269b2fd0c154b96738093d980490d/transformed/jetified-activity-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/0ebdb6c5cd04141622077eb48ba32e82/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/0ebdb6c5cd04141622077eb48ba32e82/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/1b4c87c46fb9550103efed6aa764f445/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/1b4c87c46fb9550103efed6aa764f445/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/a821ffa709e020f953e0c9f322106aba/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/a821ffa709e020f953e0c9f322106aba/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/a3108c1c59b46736c895ab3c89d5aae6/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/a3108c1c59b46736c895ab3c89d5aae6/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/ed20218b9c92f7ec8fd30201f21f3bee/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/ed20218b9c92f7ec8fd30201f21f3bee/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/f32668481dc95265ab4455169acf6ba4/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/f32668481dc95265ab4455169acf6ba4/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/aeb3e8ee42c2af94b9712e70c8a9bd82/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/aeb3e8ee42c2af94b9712e70c8a9bd82/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/e2f488867473931bacf7d74ffb7e0cab/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/e2f488867473931bacf7d74ffb7e0cab/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/f28e7fb2cbc8affc0e7304e4bbec3b58/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/f28e7fb2cbc8affc0e7304e4bbec3b58/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /home/wanleung/.gradle/caches/8.13/transforms/86c5d5fcca3635418f4c5d248be763d2/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /home/wanleung/.gradle/caches/8.13/transforms/86c5d5fcca3635418f4c5d248be763d2/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /home/wanleung/.gradle/caches/8.13/transforms/98963151f51a91a3f77ac71d4f20c99e/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /home/wanleung/.gradle/caches/8.13/transforms/98963151f51a91a3f77ac71d4f20c99e/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/386436eb15f2a6ed3e0b42743092dc3a/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/386436eb15f2a6ed3e0b42743092dc3a/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/f9a895950b616dfa7e5aa7af0114f835/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/f9a895950b616dfa7e5aa7af0114f835/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/3057c1fd72d1645568d70dd96f90106b/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/3057c1fd72d1645568d70dd96f90106b/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/ef33e05e5133a112c6cc8797453b8a17/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /home/wanleung/.gradle/caches/8.13/transforms/ef33e05e5133a112c6cc8797453b8a17/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/4d8a1eff85be8cf5617f063d344bac8a/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/4d8a1eff85be8cf5617f063d344bac8a/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /home/wanleung/.gradle/caches/8.13/transforms/53906f106ffc6093ff6f6b4fed8ea85c/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /home/wanleung/.gradle/caches/8.13/transforms/53906f106ffc6093ff6f6b4fed8ea85c/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /home/wanleung/.gradle/caches/8.13/transforms/4c8843efe8cd9eced539ef079cdcb976/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /home/wanleung/.gradle/caches/8.13/transforms/4c8843efe8cd9eced539ef079cdcb976/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/5bde49fadbaf0f3265b39c4b5ca2fd15/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/5bde49fadbaf0f3265b39c4b5ca2fd15/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/fb32ea96f6e2e5e5367b8c85544cc4d0/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/fb32ea96f6e2e5e5367b8c85544cc4d0/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/9fd03fa9ef81c27f51a7215de25f49d1/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/9fd03fa9ef81c27f51a7215de25f49d1/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/3c49456e0a380355fa746a924056ccf9/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/3c49456e0a380355fa746a924056ccf9/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/86b97bf4e36882146a24065f7a7b26b9/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/86b97bf4e36882146a24065f7a7b26b9/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/wanleung/.gradle/caches/8.13/transforms/c9565e35d26623c5782dfe79ba7ace66/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/wanleung/.gradle/caches/8.13/transforms/c9565e35d26623c5782dfe79ba7ace66/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /home/wanleung/.gradle/caches/8.13/transforms/596881bf4e52b8dca885b3d27ef9aff3/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /home/wanleung/.gradle/caches/8.13/transforms/596881bf4e52b8dca885b3d27ef9aff3/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/wanleung/.gradle/caches/8.13/transforms/6cdf3b301057350cbd5685c2a0e4976b/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/wanleung/.gradle/caches/8.13/transforms/6cdf3b301057350cbd5685c2a0e4976b/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/99b6a52dcee8cf4582415a4f71502ea0/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/99b6a52dcee8cf4582415a4f71502ea0/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/8466d4ef212ac1c6dc08c0b6f9141437/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/8466d4ef212ac1c6dc08c0b6f9141437/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/974558053e172ebbdc10993b111d52e8/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/974558053e172ebbdc10993b111d52e8/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/3110a38ff0bd5ea4f95a0f5b01160d70/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/wanleung/.gradle/caches/8.13/transforms/3110a38ff0bd5ea4f95a0f5b01160d70/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/wanleung/.gradle/caches/8.13/transforms/4dcb73d6529b6faa07265bbbd72c20da/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/wanleung/.gradle/caches/8.13/transforms/4dcb73d6529b6faa07265bbbd72c20da/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+	android:targetSdkVersion
+		INJECTED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /home/wanleung/.gradle/caches/8.13/transforms/53906f106ffc6093ff6f6b4fed8ea85c/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /home/wanleung/.gradle/caches/8.13/transforms/53906f106ffc6093ff6f6b4fed8ea85c/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/9fd03fa9ef81c27f51a7215de25f49d1/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/wanleung/.gradle/caches/8.13/transforms/9fd03fa9ef81c27f51a7215de25f49d1/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+permission#com.linkomnia.android.Stroke5.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+uses-permission#com.linkomnia.android.Stroke5.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /home/wanleung/.gradle/caches/8.13/transforms/53906f106ffc6093ff6f6b4fed8ea85c/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /home/wanleung/.gradle/caches/8.13/transforms/53906f106ffc6093ff6f6b4fed8ea85c/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /home/wanleung/.gradle/caches/8.13/transforms/53906f106ffc6093ff6f6b4fed8ea85c/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78

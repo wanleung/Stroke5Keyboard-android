@@ -1,0 +1,124 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3/*
+4    Stroke5 Chinese Input Method for Android
+5    Copyright (C) 2012 LinkOmnia Ltd.
+6
+7    Author: Wan Leung Wong (wanleung@linkomnia.com)
+8
+9    This program is free software: you can redistribute it and/or modify
+10    it under the terms of the GNU General Public License as published by
+11    the Free Software Foundation, either version 3 of the License, or
+12    (at your option) any later version.
+13
+14    This program is distributed in the hope that it will be useful,
+15    but WITHOUT ANY WARRANTY; without even the implied warranty of
+16    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+17    GNU General Public License for more details.
+18
+19    You should have received a copy of the GNU General Public License
+20    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+21*/
+22-->
+23<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+24    package="com.linkomnia.android.Stroke5"
+25    android:versionCode="2"
+26    android:versionName="0.1" >
+27
+28    <uses-sdk
+29        android:minSdkVersion="14"
+30        android:targetSdkVersion="34" />
+31
+32    <uses-permission android:name="android.permission.VIBRATE" />
+32-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:25:5-66
+32-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:25:22-63
+33
+34    <permission
+34-->[androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+35        android:name="com.linkomnia.android.Stroke5.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+35-->[androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+36        android:protectionLevel="signature" />
+36-->[androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+37
+38    <uses-permission android:name="com.linkomnia.android.Stroke5.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+38-->[androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+38-->[androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+39
+40    <application
+40-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:26:5-49:19
+41        android:allowBackup="true"
+41-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:29:9-35
+42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+42-->[androidx.core:core:1.9.0] /home/wanleung/.gradle/caches/8.13/transforms/5418d86f9bf51acc009e025a9c494d67/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+43        android:debuggable="true"
+44        android:extractNativeLibs="true"
+45        android:icon="@drawable/ic_launcher"
+45-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:28:9-45
+46        android:label="@string/ime_name"
+46-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:27:9-41
+47        android:testOnly="true"
+48        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+48-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:30:9-67
+49        <service
+49-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:31:9-38:19
+50            android:name="com.linkomnia.android.Stroke5.StrokeFiveKeyboard"
+50-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:31:18-81
+51            android:exported="false"
+51-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:33:17-41
+52            android:permission="android.permission.BIND_INPUT_METHOD" >
+52-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:32:17-74
+53            <intent-filter>
+53-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:34:13-36:29
+54                <action android:name="android.view.InputMethod" />
+54-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:35:17-67
+54-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:35:25-64
+55            </intent-filter>
+56
+57            <meta-data
+57-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:37:13-88
+58                android:name="android.view.im"
+58-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:37:24-54
+59                android:resource="@xml/method" />
+59-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:37:55-85
+60        </service>
+61
+62        <activity
+62-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:40:9-46:20
+63            android:name="com.linkomnia.android.Stroke5.Setting"
+63-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:40:19-41
+64            android:exported="true"
+64-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:42:17-40
+65            android:label="@string/ime_name" >
+65-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:41:17-49
+66            <intent-filter>
+66-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:43:13-45:29
+67                <action android:name="android.intent.action.MAIN" />
+67-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:44:17-68
+67-->/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/AndroidManifest.xml:44:25-66
+68            </intent-filter>
+69        </activity>
+70
+71        <provider
+71-->[androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+72            android:name="androidx.startup.InitializationProvider"
+72-->[androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+73            android:authorities="com.linkomnia.android.Stroke5.androidx-startup"
+73-->[androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+74            android:exported="false" >
+74-->[androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+75            <meta-data
+75-->[androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+76                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+76-->[androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+77                android:value="androidx.startup" />
+77-->[androidx.emoji2:emoji2:1.2.0] /home/wanleung/.gradle/caches/8.13/transforms/7d4c1130c1a3f20467892e9db1658fa0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+78            <meta-data
+78-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/wanleung/.gradle/caches/8.13/transforms/53906f106ffc6093ff6f6b4fed8ea85c/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+79                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+79-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/wanleung/.gradle/caches/8.13/transforms/53906f106ffc6093ff6f6b4fed8ea85c/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+80                android:value="androidx.startup" />
+80-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/wanleung/.gradle/caches/8.13/transforms/53906f106ffc6093ff6f6b4fed8ea85c/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+81        </provider>
+82    </application>
+83
+84</manifest>

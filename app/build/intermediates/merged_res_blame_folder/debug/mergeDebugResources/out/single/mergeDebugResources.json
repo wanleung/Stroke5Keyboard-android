@@ -1,0 +1,262 @@
+[
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_stroke5_show.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/stroke5_show.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_key_done.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/key_done.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_stroke2.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/stroke2.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/layout_setting_about.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/layout/setting_about.xml"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_key_enter.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/key_enter.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_key_delete.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/key_delete.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/layout_candidates.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/layout/candidates.xml"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_stroke0_show.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/stroke0_show.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/layout-land_candidates.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/layout-land/candidates.xml"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_key_chinese.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/key_chinese.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_key_space.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/key_space.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_stroke5.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/stroke5.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/layout-xlarge_candidates.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/layout-xlarge/candidates.xml"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_stroke4_show.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/stroke4_show.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_stroke3.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/stroke3.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_ic_launcher.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_key_lang.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/key_lang.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_key_space.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/key_space.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_stroke1.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/stroke1.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_button.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/button.xml"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_key_chinese.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/key_chinese.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_stroke3_show.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/stroke3_show.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_stroke5_show.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/stroke5_show.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_ic_launcher.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_key_bkg_press.9.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/key_bkg_press.9.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_stroke4.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/stroke4.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_key_bkg.9.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/key_bkg.9.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_stroke2_show.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/stroke2_show.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/xml_pref.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/xml/pref.xml"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_smiles.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/smiles.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_key_bkg_press.9.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/key_bkg_press.9.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/raw_stroke.ser.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/raw/stroke.ser"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-hdpi_ic_launcher.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_stroke1_show.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/stroke1_show.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_smiles.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/smiles.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/xml_symbols_en.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/xml/symbols_en.xml"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/xml_qwert.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/xml/qwert.xml"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_button.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/button.xml"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_key_shift.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/key_shift.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_key_char.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/key_char.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_stroke3_show.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/stroke3_show.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/xml_simley.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/xml/simley.xml"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/xml_symbols_ch.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/xml/symbols_ch.xml"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_stroke0_show.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/stroke0_show.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_stroke5.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/stroke5.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_stroke3.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/stroke3.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_stroke4_show.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/stroke4_show.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-ldpi_ic_launcher.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-ldpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/raw_tsin.ser.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/raw/tsin.ser"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_stroke1_show.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/stroke1_show.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/xml_symbols_en_shift.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/xml/symbols_en_shift.xml"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_stroke1.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/stroke1.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/layout_main.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/layout/main.xml"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_key_delete.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/key_delete.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_key_enter.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/key_enter.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_key_bkg.9.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/key_bkg.9.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_stroke4.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/stroke4.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/xml_stroke5.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/xml/stroke5.xml"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_key_done.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/key_done.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-xlarge-mdpi_stroke2.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-xlarge-mdpi/stroke2.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_key_lang.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/key_lang.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_key_char.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/key_char.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_key_shift.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/key_shift.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/drawable-mdpi_stroke2_show.png.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/drawable-mdpi/stroke2_show.png"
+    },
+    {
+        "merged": "com.linkomnia.android.Stroke5.app-debug-28:/xml_method.xml.flat",
+        "source": "com.linkomnia.android.Stroke5.app-main-30:/xml/method.xml"
+    }
+]

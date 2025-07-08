@@ -1,0 +1,10 @@
+#Wed Jul 09 00:54:15 BST 2025
+base.0=/home/wanleung/Projects/Stroke5Keyboard-android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/home/wanleung/Projects/Stroke5Keyboard-android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/home/wanleung/Projects/Stroke5Keyboard-android/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=12/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex

@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.linkomnia.android.Stroke5.app-mergeDebugResources-26:/values-xlarge-land-v4/values-xlarge-land-v4.xml",
+            "map": [
+                {
+                    "source": "/home/wanleung/Projects/Stroke5Keyboard-android/app/src/main/res/values-xlarge-land/strings.xml",
+                    "from": {
+                        "startLines": "24,23",
+                        "startColumns": "4,4",
+                        "startOffsets": "901,859",
+                        "endColumns": "54,41",
+                        "endOffsets": "951,896"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,110",
+                        "endColumns": "54,41",
+                        "endOffsets": "105,147"
+                    }
+                }
+            ]
+        }
+    ]
+}

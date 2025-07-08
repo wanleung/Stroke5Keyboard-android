@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ime_name">筆順五碼中文輸入法</string>
+    <string name="pref_about">關於本程式</string>
+</resources>
