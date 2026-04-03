@@ -2,7 +2,7 @@
     Stroke5 Chinese Input Method for Android
     Copyright (C) 2012 Wanleung's Workshop
 
-    Author: Wan Leung Wong (wanleung@wanleung.com)
+    Author: Wan Leung Wong (info@wanleung.com)
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
