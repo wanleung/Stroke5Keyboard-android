@@ -2,11 +2,17 @@ plugins {
     id 'com.android.application'
 }
 
-// Load signing credentials from local.properties (not committed to git)
+// Load signing credentials from keystore.properties (not committed to git)
 def localProps = new Properties()
 def localPropsFile = rootProject.file('../local.properties')
 if (localPropsFile.exists()) {
     localPropsFile.withInputStream { localProps.load(it) }
+}
+
+def keystoreProps = new Properties()
+def keystorePropsFile = rootProject.file('keystore.properties')
+if (keystorePropsFile.exists()) {
+    keystorePropsFile.withInputStream { keystoreProps.load(it) }
 }
 
 android {
@@ -22,13 +28,11 @@ android {
     }
 
     signingConfigs {
-        if (localProps.getProperty('keystore.path')) {
-            release {
-                storeFile     file(localProps.getProperty('keystore.path'))
-                storePassword      localProps.getProperty('keystore.password', '')
-                keyAlias           localProps.getProperty('keystore.alias',    'stroke5key')
-                keyPassword        localProps.getProperty('keystore.keypass',  '')
-            }
+        release {
+            storeFile     file(keystoreProps.getProperty('storeFile',     ''))
+            storePassword      keystoreProps.getProperty('storePassword', '')
+            keyAlias           keystoreProps.getProperty('keyAlias',      'stroke5')
+            keyPassword        keystoreProps.getProperty('keyPassword',   '')
         }
     }
 
@@ -50,9 +54,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), '../proguard.cfg'
-            if (signingConfigs.hasProperty('release')) {
-                signingConfig signingConfigs.release
-            }
+            signingConfig signingConfigs.release
         }
     }
 }
