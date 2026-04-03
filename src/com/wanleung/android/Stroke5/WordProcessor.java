@@ -18,7 +18,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-package com.linkomnia.android.Stroke5;
+package com.wanleung.android.Stroke5;
 
 import java.io.InputStream;
 import java.io.ObjectInputStream;
@@ -27,7 +27,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import com.linkomnia.android.Stroke5.R;
+import com.wanleung.android.Stroke5.R;
 
 import android.content.Context;
 import android.util.Log;

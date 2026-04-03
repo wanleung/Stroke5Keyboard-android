@@ -20,7 +20,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 -->
-<com.linkomnia.android.Stroke5.CandidateView
+<com.wanleung.android.Stroke5.CandidateView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/candidate_view"
         android:orientation="horizontal"
@@ -82,4 +82,4 @@
         
     </LinearLayout>
 
-</com.linkomnia.android.Stroke5.CandidateView>
+</com.wanleung.android.Stroke5.CandidateView>

@@ -21,7 +21,7 @@
 */
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.linkomnia.android.Stroke5"
+        package="com.wanleung.android.Stroke5"
         android:versionCode="2"
         android:versionName="@string/ime_version">
 
@@ -31,7 +31,7 @@
             android:allowBackup="true"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <service android:name="com.linkomnia.android.Stroke5.StrokeFiveKeyboard"
+        <service android:name="com.wanleung.android.Stroke5.StrokeFiveKeyboard"
                 android:exported="true"
                 android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
@@ -40,7 +40,7 @@
             <meta-data android:name="android.view.im" android:resource="@xml/method" />
         </service>
 
-        <activity android:name="com.linkomnia.android.Stroke5.MainActivity"
+        <activity android:name="com.wanleung.android.Stroke5.MainActivity"
                 android:exported="true"
                 android:label="@string/ime_name">
             <intent-filter>
@@ -49,7 +49,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.linkomnia.android.Stroke5.Setting"
+        <activity android:name="com.wanleung.android.Stroke5.Setting"
                 android:exported="false"
                 android:label="@string/ime_name">
         </activity>

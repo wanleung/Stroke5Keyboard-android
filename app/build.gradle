@@ -16,11 +16,11 @@ if (keystorePropsFile.exists()) {
 }
 
 android {
-    namespace 'com.linkomnia.android.Stroke5'
+    namespace 'com.wanleung.android.Stroke5'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.linkomnia.android.Stroke5"
+        applicationId "com.wanleung.android.Stroke5"
         minSdk 21
         targetSdk 34
         versionCode 2

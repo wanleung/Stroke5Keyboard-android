@@ -21,4 +21,4 @@
 */
 -->
 <input-method xmlns:android="http://schemas.android.com/apk/res/android"
-    android:settingsActivity="com.linkomnia.android.Stroke5.Setting" />
+    android:settingsActivity="com.wanleung.android.Stroke5.Setting" />

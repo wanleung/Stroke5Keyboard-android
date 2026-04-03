@@ -18,7 +18,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-package com.linkomnia.android.Stroke5;
+package com.wanleung.android.Stroke5;
 
 import android.content.Context;
 import android.inputmethodservice.Keyboard;

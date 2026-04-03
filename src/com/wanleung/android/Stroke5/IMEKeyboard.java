@@ -18,25 +18,42 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-package com.linkomnia.android.Stroke5;
+package com.wanleung.android.Stroke5;
 
 import android.content.Context;
-import android.content.res.Resources;
-import android.content.res.XmlResourceParser;
 import android.inputmethodservice.Keyboard;
-import android.inputmethodservice.Keyboard.Key;
-import android.inputmethodservice.Keyboard.Row;
-import android.view.inputmethod.EditorInfo;
 
-public class Stroke5KeyBoard extends Keyboard {
-    public Stroke5KeyBoard(Context context, int xmlLayoutResId) {
+public class IMEKeyboard extends Keyboard {
+    
+    static final int KEYCODE_ENTER = 10;
+    static final int KEYCODE_CAPLOCK = -200;
+    static final int KEYCODE_MODE_CHANGE_CHAR = -300;
+    static final int KEYCODE_MODE_CHANGE_SIMLEY = -400;
+    static final int KEYCODE_MODE_CHANGE_CHSYMBOL = -500;
+    static final int KEYCODE_MODE_CHANGE_LANG = -600;
+    
+    private boolean isCapLock;
+    
+    public IMEKeyboard(Context context, int xmlLayoutResId) {
         super(context, xmlLayoutResId);
+        this.isCapLock = false;
+        this.setShifted(false);
     }
 
-    public Stroke5KeyBoard(Context context, int layoutTemplateResId, 
+    public IMEKeyboard(Context context, int layoutTemplateResId,
             CharSequence characters, int columns, int horizontalPadding) {
-        super(context, layoutTemplateResId, characters, columns, horizontalPadding);
+        super(context, layoutTemplateResId, characters, columns,
+                horizontalPadding);
+        this.isCapLock = false;
+        this.setShifted(false);
     }
     
+    public boolean isCapLock() {
+        return this.isCapLock;
+    }
     
+    public void setCapLock(boolean b) {
+        this.isCapLock = b;
+        this.setShifted(b);
+    }
 }

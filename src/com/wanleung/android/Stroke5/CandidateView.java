@@ -18,7 +18,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-package com.linkomnia.android.Stroke5;
+package com.wanleung.android.Stroke5;
 
 import java.util.ArrayList;
 
@@ -32,7 +32,7 @@ import android.widget.LinearLayout;
 
 import androidx.core.content.ContextCompat;
 
-import com.linkomnia.android.Stroke5.R;
+import com.wanleung.android.Stroke5.R;
 
 @SuppressWarnings("deprecation")
 public class CandidateView extends LinearLayout {

@@ -18,42 +18,24 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-package com.linkomnia.android.Stroke5;
+/*
+ * This Class is to handle non Stroke5 Keyboard
+ */
+
+package com.wanleung.android.Stroke5;
 
 import android.content.Context;
 import android.inputmethodservice.Keyboard;
 
-public class IMEKeyboard extends Keyboard {
-    
-    static final int KEYCODE_ENTER = 10;
-    static final int KEYCODE_CAPLOCK = -200;
-    static final int KEYCODE_MODE_CHANGE_CHAR = -300;
-    static final int KEYCODE_MODE_CHANGE_SIMLEY = -400;
-    static final int KEYCODE_MODE_CHANGE_CHSYMBOL = -500;
-    static final int KEYCODE_MODE_CHANGE_LANG = -600;
-    
-    private boolean isCapLock;
-    
-    public IMEKeyboard(Context context, int xmlLayoutResId) {
+public class LatinKeyboard extends Keyboard {
+    public LatinKeyboard(Context context, int xmlLayoutResId) {
         super(context, xmlLayoutResId);
-        this.isCapLock = false;
-        this.setShifted(false);
     }
 
-    public IMEKeyboard(Context context, int layoutTemplateResId,
+    public LatinKeyboard(Context context, int layoutTemplateResId,
             CharSequence characters, int columns, int horizontalPadding) {
         super(context, layoutTemplateResId, characters, columns,
                 horizontalPadding);
-        this.isCapLock = false;
-        this.setShifted(false);
     }
-    
-    public boolean isCapLock() {
-        return this.isCapLock;
-    }
-    
-    public void setCapLock(boolean b) {
-        this.isCapLock = b;
-        this.setShifted(b);
-    }
+
 }
