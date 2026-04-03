@@ -31,7 +31,7 @@ The method was originally created in Hong Kong in 2003 by a group of seniors for
 ## Requirements
 
 - Android 5.0 (API 21) or higher
-- Tested up to Android 14 (API 34)
+- Tested up to Android 15 (API 35)
 
 ## Installation
 

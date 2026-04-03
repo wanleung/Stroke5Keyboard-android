@@ -17,12 +17,12 @@ if (keystorePropsFile.exists()) {
 
 android {
     namespace 'com.wanleung.android.Stroke5'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.wanleung.android.Stroke5"
         minSdk 21
-        targetSdk 34
+        targetSdk 35
         versionCode 3
         versionName "1.0"
     }
