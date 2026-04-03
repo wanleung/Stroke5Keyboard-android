@@ -2,6 +2,13 @@ plugins {
     id 'com.android.application'
 }
 
+// Load signing credentials from local.properties (not committed to git)
+def localProps = new Properties()
+def localPropsFile = rootProject.file('../local.properties')
+if (localPropsFile.exists()) {
+    localPropsFile.withInputStream { localProps.load(it) }
+}
+
 android {
     namespace 'com.linkomnia.android.Stroke5'
     compileSdk 34
@@ -12,6 +19,17 @@ android {
         targetSdk 34
         versionCode 2
         versionName "0.1"
+    }
+
+    signingConfigs {
+        if (localProps.getProperty('keystore.path')) {
+            release {
+                storeFile     file(localProps.getProperty('keystore.path'))
+                storePassword      localProps.getProperty('keystore.password', '')
+                keyAlias           localProps.getProperty('keystore.alias',    'stroke5key')
+                keyPassword        localProps.getProperty('keystore.keypass',  '')
+            }
+        }
     }
 
     sourceSets {
@@ -32,6 +50,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), '../proguard.cfg'
+            if (signingConfigs.hasProperty('release')) {
+                signingConfig signingConfigs.release
+            }
         }
     }
 }
