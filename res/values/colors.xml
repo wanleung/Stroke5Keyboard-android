@@ -25,4 +25,6 @@
     <color name="candidate_recommended">#FFE35900</color>
     <color name="candidate_other">#ff808080</color>
     <color name="candidate_background">#BB000000</color>
+    <color name="status_ok">#2E7D32</color>
+    <color name="status_pending">#E65100</color>
 </resources>

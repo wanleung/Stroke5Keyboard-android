@@ -23,4 +23,19 @@
 <resources>
      <string name="ime_name">筆順五碼中文輸入法</string>
      <string name="pref_about">關於本程式</string>
+     <string name="app_subtitle">筆畫中文輸入法</string>
+     <string name="setup_title">設定步驟</string>
+     <string name="step_one_title">啟用鍵盤</string>
+     <string name="step_one_desc">在系統設定中，將筆順五碼加入已啟用的輸入法清單。</string>
+     <string name="step_two_title">選擇輸入法</string>
+     <string name="step_two_desc">選擇筆順五碼為目前使用的輸入法，即可在任何應用程式中使用。</string>
+     <string name="btn_enable">開啟輸入法設定</string>
+     <string name="btn_reopen_settings">重新開啟輸入法設定</string>
+     <string name="btn_select">選擇輸入法</string>
+     <string name="btn_about">關於</string>
+     <string name="privacy_policy">私隱政策</string>
+     <string name="status_enabled">✓ 已啟用</string>
+     <string name="status_not_enabled">未啟用</string>
+     <string name="status_selected">✓ 使用中</string>
+     <string name="status_not_selected">未選取</string>
 </resources>
