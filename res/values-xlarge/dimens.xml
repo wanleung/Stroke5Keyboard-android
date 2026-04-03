@@ -28,5 +28,6 @@
     <dimen name="strokekey_height">145dip</dimen>
     <dimen name="candidate_font_height">50sp</dimen>
     <dimen name="candidates_view_height">200dip</dimen>
+    <dimen name="candidate_row_height">100dip</dimen>
 </resources>
 

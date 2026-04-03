@@ -27,6 +27,7 @@
     <dimen name="key_verticalgap">0dip</dimen>
     <dimen name="strokekey_height">70dip</dimen>
     <dimen name="candidate_font_height">20sp</dimen>
-    <dimen name="candidates_view_height">35dip</dimen>
+    <dimen name="candidates_view_height">90dip</dimen>
+    <dimen name="candidate_row_height">45dip</dimen>
 </resources>
 

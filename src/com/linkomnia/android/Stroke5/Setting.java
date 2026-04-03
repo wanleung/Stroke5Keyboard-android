@@ -21,43 +21,51 @@
 package com.linkomnia.android.Stroke5;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceClickListener;
-import android.preference.PreferenceActivity;
 import android.view.View;
 import android.webkit.WebView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
 
-public class Setting extends PreferenceActivity {
+
+public class Setting extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.pref);
-
-        Preference about = this.findPreference("about");
-        about.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-            public boolean onPreferenceClick(Preference preference) {
-                showAboutBox();
-                return true;
-            }
-        });
-
+        if (savedInstanceState == null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(android.R.id.content, new SettingFragment())
+                    .commit();
+        }
     }
-    
-    private void showAboutBox() {
-        View aboutView = View.inflate(this, R.layout.setting_about, null);
-        WebView webView = (WebView) aboutView.findViewWithTag("webview");
-        webView.loadUrl("file:///android_asset/about.html");
-        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-        dialog.setTitle(getString(R.string.ime_name)+" v"+getString(R.string.ime_version));
-        dialog.setView(aboutView);
-        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                //Setting.this.finish();
+
+    public static class SettingFragment extends PreferenceFragmentCompat {
+
+        @Override
+        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+            setPreferencesFromResource(R.xml.pref, rootKey);
+            Preference about = findPreference("about");
+            if (about != null) {
+                about.setOnPreferenceClickListener(preference -> {
+                    showAboutBox();
+                    return true;
+                });
             }
-        });
-        dialog.show();
+        }
+
+        private void showAboutBox() {
+            View aboutView = View.inflate(requireContext(), R.layout.setting_about, null);
+            WebView webView = aboutView.findViewWithTag("webview");
+            webView.loadUrl("file:///android_asset/about.html");
+            new AlertDialog.Builder(requireContext())
+                    .setTitle(getString(R.string.ime_name) + " v" + getString(R.string.ime_version))
+                    .setView(aboutView)
+                    .setPositiveButton("OK", null)
+                    .show();
+        }
     }
 }

@@ -27,6 +27,7 @@ import android.inputmethodservice.Keyboard.Key;
 import android.util.AttributeSet;
 import android.util.Log;
 
+@SuppressWarnings("deprecation")
 public class IMEKeyboardView extends KeyboardView {
 
     public IMEKeyboardView(Context context, AttributeSet attrs) {

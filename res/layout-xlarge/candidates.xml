@@ -23,9 +23,9 @@
 <com.linkomnia.android.Stroke5.CandidateView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/candidate_view"
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/candidates_view_height"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="fill"
         
         >
@@ -33,10 +33,9 @@
     <LinearLayout
         android:id="@+id/bottombar"
         android:orientation="horizontal" 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/candidate_row_height"
         android:gravity="fill"
-        android:layout_weight="@string/candidates_bottom_weight"
         >
         
     </LinearLayout>
@@ -44,15 +43,14 @@
     <LinearLayout 
         android:id="@+id/topbar"
         android:orientation="horizontal" 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/candidate_row_height"
         android:gravity="fill"
-        android:layout_weight="1"
         >
         <Button
         	android:id="@+id/arrow_left"
         	android:layout_width="85dp"
-        	android:layout_height="fill_parent"
+        	android:layout_height="match_parent"
         	android:clickable="true"
         	android:textSize="@dimen/candidate_font_height"
         	android:textColor="@color/candidate_normal"
@@ -63,7 +61,7 @@
         		android:id="@+id/wordbar"
         		android:orientation="horizontal" 
         		android:layout_width="0dip"
-        		android:layout_height="fill_parent"
+        		android:layout_height="match_parent"
         		android:gravity="fill"
         		android:layout_weight="1"
         	>
@@ -73,7 +71,7 @@
     	<Button
         	android:id="@+id/arrow_right"
         	android:layout_width="85dp"
-        	android:layout_height="fill_parent"
+        	android:layout_height="match_parent"
         	android:clickable="true"
         	android:textSize="@dimen/candidate_font_height"
         	android:textColor="@color/candidate_normal"

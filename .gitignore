@@ -1,0 +1,29 @@
+# Local SDK path — machine-specific, never commit
+local.properties
+
+# Gradle build outputs and caches
+.gradle/
+build/
+app/build/
+
+# Android Studio / IntelliJ IDE files
+*.iml
+.idea/
+*.iws
+*.ipr
+
+# Eclipse ADT (legacy — project was originally Eclipse)
+.classpath
+.project
+.settings/
+bin/
+gen/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Keystore / signing files — never commit secrets
+*.jks
+*.keystore
+keystore.properties

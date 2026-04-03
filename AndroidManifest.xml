@@ -20,30 +20,32 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" 
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="com.linkomnia.android.Stroke5"
         android:versionCode="2"
-      	android:versionName="@string/ime_version">
-        >
-    <uses-sdk android:minSdkVersion="10" />
+        android:versionName="@string/ime_version">
+
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34" />
     <application android:label="@string/ime_name"
-        	android:icon="@drawable/ic_launcher"
-        	android:debuggable="false"
-        	>
+            android:icon="@drawable/ic_launcher"
+            android:allowBackup="true"
+            android:supportsRtl="true">
         <service android:name="com.linkomnia.android.Stroke5.StrokeFiveKeyboard"
+                android:exported="true"
                 android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
             </intent-filter>
             <meta-data android:name="android.view.im" android:resource="@xml/method" />
         </service>
-        
-        <activity android:name="Setting" android:label="@string/ime_name">
+
+        <activity android:name="com.linkomnia.android.Stroke5.Setting"
+                android:exported="true"
+                android:label="@string/ime_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
-        
-        
+
     </application>
 </manifest>

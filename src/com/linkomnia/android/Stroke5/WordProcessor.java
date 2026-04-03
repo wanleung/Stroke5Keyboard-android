@@ -23,9 +23,6 @@ package com.linkomnia.android.Stroke5;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -33,7 +30,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import com.linkomnia.android.Stroke5.R;
 
 import android.content.Context;
-import android.os.AsyncTask;
 import android.util.Log;
 
 public class WordProcessor {
@@ -53,7 +49,7 @@ public class WordProcessor {
     }
     
     public void init() {
-        new ImportFilesTask().execute(this);
+        new Thread(this::loading).start();
     }
     
     @SuppressWarnings("unchecked")
@@ -92,18 +88,5 @@ public class WordProcessor {
             Log.w("WANLEUNG", e.toString());
         }
         return obj;
-    }
-    
-    private class ImportFilesTask extends AsyncTask<WordProcessor, Void, Long> {
-        protected Long doInBackground(WordProcessor... fims) {
-            int count = fims.length;
-            long totalSize = 0;
-            for (int i = 0; i < count; i++) {
-                totalSize ++;
-                fims[i].loading();
-            }
-            return totalSize;
-        }
-
     }
 }

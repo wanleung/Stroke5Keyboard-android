@@ -25,23 +25,17 @@ import java.util.List;
 
 import com.linkomnia.android.Stroke5.R;
 
-import android.app.AlertDialog;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.Keyboard.Key;
 import android.inputmethodservice.KeyboardView;
-import android.text.method.MetaKeyKeyListener;
-import android.util.Log;
-import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.view.inputmethod.CompletionInfo;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
-import android.view.inputmethod.InputMethodManager;
 
+@SuppressWarnings("deprecation")
 public class StrokeFiveKeyboard extends InputMethodService implements
         KeyboardView.OnKeyboardActionListener {
     /** Called when the activity is first created. */
@@ -70,16 +64,13 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
 
     public View onCreateInputView() {
-        inputView = (IMEKeyboardView) getLayoutInflater().inflate(R.layout.main, null);
+        View root = getLayoutInflater().inflate(R.layout.main, null);
+        candidateView = (CandidateView) root.findViewById(R.id.candidate_view);
+        candidateView.setDelegate(this);
+        inputView = (IMEKeyboardView) root.findViewById(R.id.keyboard);
         inputView.setPreviewEnabled(false);
         inputView.setOnKeyboardActionListener(this);
-        return inputView;
-    }
-    
-    public View onCreateCandidatesView() {
-        candidateView = (CandidateView) getLayoutInflater().inflate(R.layout.candidates, null);
-        candidateView.setDelegate(this);
-        return candidateView;
+        return root;
     }
 
     public void onStartInput(EditorInfo attribute, boolean restarting) {
@@ -99,7 +90,12 @@ public class StrokeFiveKeyboard extends InputMethodService implements
         super.onStartInputView(attribute, restarting);
         this.imeSwitch.init();
         this.inputView.setKeyboard(this.imeSwitch.getCurrentKeyboard());
-        this.setCandidatesViewShown(true);
+    }
+
+    @Override
+    public boolean onEvaluateFullscreenMode() {
+        // Never enter fullscreen — it hides the candidates bar on modern Android
+        return false;
     }
     
     public void onUpdateSelection(int oldSelStart, int oldSelEnd,
@@ -113,7 +109,6 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     }
     
     public void onKey(int primaryCode, int[] keyCodes) {
-        this.wordProcessor.getChinesePhraseDictLinkedHashMap("(");
         if (imeSwitch.handleKey(primaryCode)) {
             this.strokereset();
             this.inputView.setKeyboard(imeSwitch.getCurrentKeyboard());
@@ -271,10 +266,8 @@ public class StrokeFiveKeyboard extends InputMethodService implements
     private void updateCandidates(ArrayList<String> words) {
         if (words.isEmpty()) {
             this.candidateView.setSuggestion(words);
-            //setCandidatesViewShown(false);
         } else {
             this.candidateView.setSuggestion(words);
-            setCandidatesViewShown(true);
         }   
     }
     

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- In landscape, bottombar and topbar are side-by-side (single row height) -->
+    <dimen name="candidates_view_height">45dip</dimen>
+    <dimen name="candidate_row_height">45dip</dimen>
+</resources>

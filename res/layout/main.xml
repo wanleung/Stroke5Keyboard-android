@@ -20,12 +20,21 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 -->
-<com.linkomnia.android.Stroke5.IMEKeyboardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/keyboard"
-        android:layout_alignParentBottom="true"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:keyTextSize="@dimen/keychar_size"
-        android:labelTextSize="@dimen/keychar_size"
-        />
+        android:layout_height="wrap_content">
+
+    <include layout="@layout/candidates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.linkomnia.android.Stroke5.IMEKeyboardView
+            android:id="@+id/keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:keyTextSize="@dimen/keychar_size"
+            android:labelTextSize="@dimen/keychar_size"
+            />
+
+</LinearLayout>

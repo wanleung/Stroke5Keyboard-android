@@ -24,19 +24,17 @@ import java.util.ArrayList;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 
-import java.math.*;
+import androidx.core.content.ContextCompat;
 
 import com.linkomnia.android.Stroke5.R;
 
+@SuppressWarnings("deprecation")
 public class CandidateView extends LinearLayout {
     
     private Context ctx;
@@ -49,7 +47,7 @@ public class CandidateView extends LinearLayout {
     
     private int result_max;
     
-    private ArrayList<ImageButton> inputBox;
+    private ArrayList<ImageView> inputBox;
     private ArrayList<Button> wordbuttonList;
     private int wordlevel;
 
@@ -70,7 +68,7 @@ public class CandidateView extends LinearLayout {
         
         result_max = Integer.parseInt(this.getResources().getString(R.string.result_max));
         this.wordList = new ArrayList<String>();
-        this.setBackgroundColor(getResources().getColor(R.color.candidate_background));
+        this.setBackgroundColor(ContextCompat.getColor(ctx, R.color.candidate_background));
         
         this.leftButton = (Button) findViewById(R.id.arrow_left);
         this.leftButton.setText("<");
@@ -83,25 +81,29 @@ public class CandidateView extends LinearLayout {
         this.wordbuttonList = new ArrayList<Button>();
         this.wordbar = (LinearLayout)this.findViewById(R.id.wordbar);
 
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1);
 
         for (int i = 0; i < result_max; i++) {
             Button b = new Button(ctx);
-            b.setTextColor(this.getResources().getColor(R.color.candidate_normal));
-            b.setTextSize(this.getResources().getDimension(R.dimen.keychar_size));
-            b.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.button));
+            b.setTextColor(ContextCompat.getColor(ctx, R.color.candidate_normal));
+            b.setTextSize(TypedValue.COMPLEX_UNIT_PX, this.getResources().getDimensionPixelSize(R.dimen.keychar_size));
+            b.setBackground(ContextCompat.getDrawable(ctx, R.drawable.button));
+            b.setPadding(0, 0, 0, 0);
+            b.setMinHeight(0);
+            b.setMinimumHeight(0);
+            b.setAllCaps(false);
             this.wordbuttonList.add(b);
             this.wordbar.addView(b, lp);
             b.setOnClickListener(new WordButtonOnClickListener(this));
-
         }
         
         this.bottombar = (LinearLayout)this.findViewById(R.id.bottombar);
-        this.inputBox = new ArrayList<ImageButton>();
+        this.inputBox = new ArrayList<ImageView>();
         for (int i = 0; i < 5; i++) {
-            ImageButton b = new ImageButton(ctx);
+            ImageView b = new ImageView(ctx);
             b.setImageResource(R.drawable.stroke0_show);
-            b.setBackgroundColor(getResources().getColor(R.color.candidate_background));
+            b.setBackgroundColor(ContextCompat.getColor(ctx, R.color.candidate_background));
+            b.setScaleType(ImageView.ScaleType.FIT_CENTER);
             this.inputBox.add(b);
             this.bottombar.addView(b, lp);
         }
